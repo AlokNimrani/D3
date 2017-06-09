@@ -40,7 +40,7 @@
 	function barChartFunction(datafile){
 		d3.csv(datafile,function(data){
 			var data = data.filter(function(d){
-				return d.Circle == "Karnataka";
+				return d.Circle == "Karnataka";			//select the Circle for which visualization is done, can be made to be selected dynamically on the webpage
 			});
 			data.forEach(function(d){
 				d.Start = +d.StartFrequency;
@@ -48,17 +48,12 @@
 				d.BandType = +d.Band;
 				d.Liberalized = +d.Liberalized;
 				d.LinkType = d.LinkType;
-				console.log(d);
 			});
 			
-			var expensesByName = d3.nest().key(function(d){return d.Operator;}).entries(data);
-			console.log(expensesByName);
+			var groupByOperator = d3.nest().key(function(d){return d.Operator;}).entries(data);	//nest() function groups data based on key
 			
-			var operators = d3.values(expensesByName).map(function(d){return d.key;});
-			var rangeObj = d3.values(expensesByName).map(function(d){return d.values;});
-			
-			console.log(operators);
-			console.log(rangeObj);
+			var operators = d3.values(groupByOperator).map(function(d){return d.key;});
+			var rangeObj = d3.values(groupByOperator).map(function(d){return d.values;});
 			
 			var color = ['#7f0f02', '#c4b701', '#03a572', '#a204e0', '#458700', '#006387' ];
 			
@@ -70,7 +65,7 @@
 			
 			var bands = [800, 900, 1800, 2100, 2300, 2500];
 			
-			var updown = ['U', 'D', 'U/P'];
+			var updown = ['U', 'D', 'U/P'];			//U - uplink, D - downlink, U/P - unpaied
 			
 			var total = [];					//creating a new array to group data based on operator
 			var a = [], data = [], bandTypes = [];
@@ -80,15 +75,12 @@
 					bandTypes.push(rangeObj[op][ob_index].BandType);
 				}
 				total.push({op: operators[op], opdata: data});		//operator and its ranges pushed to total
-				//a = [];
 				data = [];
 			}
-			console.log(total);
 			
 			bandTypes = Array.from(new Set(bandTypes));
-			console.log(bandTypes);
 			
-			var canvas_drag = d3.select('#wrapper')
+			var canvas_drag = d3.select('#wrapper')			//creating the draggable area
 				.append('svg')
 				.attr({
 					'width': 1100,
@@ -116,7 +108,7 @@
 				.call(dragaxis)
 				;
 				
-			var brush = d3.svg.brush()
+			var brush = d3.svg.brush()				//svg.brush() has the dragging features
 				.x(x)
 				.extent([x_start, x_end])
 				.on("brush", brush);
@@ -124,7 +116,7 @@
 			function brush() {
 				var s = d3.event.target.extent();	
 				d3.event.target.extent([Math.round((s[0])/50) * 50,
-				Math.round((s[1])/50) * 50]);
+				Math.round((s[1])/50) * 50]);					//setting the drag to be in multiples of 50MHz
 				d3.event.target(d3.select(this));
 				
 				if(d3.event.target.empty()) {
@@ -168,7 +160,7 @@
 				.on('click',clicked)
 				;
 				
-			function clicked() {
+			function clicked() {						//calculates the range when the brush is clicked and reloads the values in that range
 				brush.extent([Math.round(x.invert(d3.mouse(this)[0])/50)*50,Math.round((x.invert(d3.mouse(this)[0])+50)/50)*50]);
 				xscale_start = brush.extent()[0], xscale_end = brush.extent()[1];
 				
@@ -187,7 +179,7 @@
 				main_svg_load(xscale_start, xscale_end);
 			}
 				
-			var canvas = d3.select('#wrapper')
+			var canvas = d3.select('#wrapper')				//main area to display the occupied ranges
 				.append('svg')
 				.attr('class','main_svg')
 				.attr({
@@ -233,7 +225,7 @@
 					.domain([0,1])
 					.range(liberalized);
 					
-				var legend = canvas.append('g')
+				var legend = canvas.append('g')				// creating the legend area
 					.attr('id', 'legend')
 					.attr('transform', 'translate(1100,50)');
 					
@@ -303,7 +295,7 @@
 						else return 'UnPaired';
 					});
 
-				var grid = d3.range(lines+1).map(function(i) {
+				var grid = d3.range(lines+1).map(function(i) {				//create the grids
 					return {
 						'x1': 0,
 						'y1': 20,
@@ -374,7 +366,7 @@
 					});
 
 
-				var xAxis = d3.svg.axis();
+				var xAxis = d3.svg.axis();				//define x and y-axis
 				
 				xAxis
 					.orient('bottom')
@@ -471,7 +463,7 @@
 					.style('opacity', function(d) {
 						return opacityScale(d.val[4]);
 					})
-					/*.on("mousemove", function(d){			
+					/*.on("mousemove", function(d){					//to enable the mouseover feature for highlighting the content
 						div.style("left", (d3.event.pageX+3)+"px");			
 						div.style("top", d3.event.pageY-80+"px");
 						div.style("display", "inline-block");
@@ -505,7 +497,7 @@
 		});
 			
 	}
-	barChartFunction("BandRanges.csv");
+	barChartFunction("Data/BandRanges.csv");			//passing the datafile
   </script>
   </div>
 </body>
