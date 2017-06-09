@@ -403,7 +403,7 @@
 					var self = d3.select(this),
 						text = self.text();
 						textLength = text.length;
-					console.log(textLength);
+					
 					while (textLength > (5) && text.length > 0) {
 						text = text.slice(0, -2);
 						self.text(text + '...');
@@ -440,7 +440,6 @@
 				var j = 0;
 				var sub_sub_groups = sub_groups.selectAll('#recttext')		// for each band occupied by a single operator
 					.data(function(d) {
-						console.log(d.opdata);
 						return d.opdata;
 					} );
 					
@@ -454,7 +453,6 @@
 					.filter(function(d) { return d.val[1] >= xscale.domain()[0] && d.val[2] <= xscale.domain()[1]})
 					.attr({
 						'x': function(d) {
-							console.log("d " + d.val[0] + " " + d.val[1] + " " + d.val[2] + " " + d.val[3] + " " + d.val[4] + " " + xscale(d.val[1]) + " " + xscale(d.val[2]));
 							return xscale(d.val[1]);
 						},
 						'y': function(d) {
@@ -463,17 +461,14 @@
 						},
 						'height': 30,
 						'width': function(d) {
-							console.log("w " + (d.val[2]-d.val[1]));
 							return xscale(d.val[2]) - xscale(d.val[1]);
 						}
 					})
 					
 					.style('fill', function(d) {
-						console.log("c " + colorScale(d.val[3]));
 						return colorScale(d.val[3]);
 					})
 					.style('opacity', function(d) {
-						console.log("op " + d.val[4]);
 						return opacityScale(d.val[4]);
 					})
 					/*.on("mousemove", function(d){			
@@ -501,7 +496,6 @@
 						return d.linkType; 
 					})
 					.attr("font-size",function(d) {
-						console.log("f " + Math.min(10, (xscale(d.val[2])-xscale(d.val[1]))/2));
 						return Math.min(10, (xscale(d.val[2])-xscale(d.val[1]))/2) + "px"; 
 					});
 					
@@ -511,7 +505,7 @@
 		});
 			
 	}
-	barChartFunction("bandranges.csv");
+	barChartFunction("BandRanges.csv");
   </script>
   </div>
 </body>
