@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dsnap - Charts</title>
+ 
+	<style>
+		#xaxis .domain{
+		  fill: none;
+		  stroke: #000;
+		}
+		
+		#dragaxis path, #dragaxis line {
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+		opacity: 0.6;
+		stroke-opacity: 0.6;
+		}
+		
+		#xaxis text,
+		#yaxis text{
+		  font-size: 12px;
+		}
+		
+		#dragaxis text {
+			font-size: 8px;
+			opacity: 0.6;
+		}
+	</style>
+	
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="body">
+	
+	<div id="wrapper"></div>
+	<script type="text/javascript" >
+	function barChartFunction(datafile){
+		d3.csv(datafile,function(data){
+			var data = data.filter(function(d){
+				return d.Circle == "Karnataka";
+			});
+			data.forEach(function(d){
+				d.Start = +d.StartFrequency;
+				d.End = +d.EndFrequency;
+				d.BandType = +d.Band;
+				d.Liberalized = +d.Liberalized;
+				d.LinkType = d.LinkType;
+				console.log(d);
+			});
+			
+			var expensesByName = d3.nest().key(function(d){return d.Operator;}).entries(data);
+			console.log(expensesByName);
+			
+			var operators = d3.values(expensesByName).map(function(d){return d.key;});
+			var rangeObj = d3.values(expensesByName).map(function(d){return d.values;});
+			
+			console.log(operators);
+			console.log(rangeObj);
+			
+			var color = ['#7f0f02', '#c4b701', '#03a572', '#a204e0', '#458700', '#006387' ];
+			
+			var patterns = ['circles', 'diagonal-stripe', 'vertical-stripe', 'crosshatch' , 'lightstripe', 'whitecarbon', 'verticalstripe', 'dots', 'horizontal-stripe', 'smalldot']
+
+			var opacity = ['0.5', '1'];
+			
+			var liberalized = ['No', 'Yes'];
+			
+			var bands = [800, 900, 1800, 2100, 2300, 2500];
+			
+			var updown = ['U', 'D', 'U/P'];
+			
+			var total = [];					//creating a new array to group data based on operator
+			var a = [], data = [], bandTypes = [];
+			for(op in operators) {
+				for(ob_index in rangeObj[op]) {
+					data.push({val: [op, rangeObj[op][ob_index].Start, rangeObj[op][ob_index].End, rangeObj[op][ob_index].BandType, rangeObj[op][ob_index].Liberalized], linkType: rangeObj[op][ob_index].LinkType});		// a[] stores all ranges for a single operator
+					bandTypes.push(rangeObj[op][ob_index].BandType);
+				}
+				total.push({op: operators[op], opdata: data});		//operator and its ranges pushed to total
+				//a = [];
+				data = [];
+			}
+			console.log(total);
+			
+			bandTypes = Array.from(new Set(bandTypes));
+			console.log(bandTypes);
+			
+			var canvas_drag = d3.select('#wrapper')
+				.append('svg')
+				.attr({
+					'width': 1100,
+					'height': 50
+				})
+				.attr('id', 'canvas_drag')
+				.attr('transform', 'translate(0,0)');
+			
+			x_start = 800, x_end = 2700;
+			
+			xscale_start = 800, xscale_end = 2700;
+				
+			var x = d3.scale.linear()
+				.domain([x_start,x_end])
+				.range([0,1000]);
+				
+			var dragaxis = d3.svg.axis()
+				.orient('bottom')
+				.scale(x)
+				.ticks(38);
+				
+			canvas_drag.append('g')
+				.attr('id','dragaxis')
+				.attr('transform', 'translate(40,35)')
+				.call(dragaxis)
+				;
+				
+			var brush = d3.svg.brush()
+				.x(x)
+				.extent([x_start, x_end])
+				.on("brush", brush);
+				
+			//console.log(brush.extent());
+
+			function brush() {
+				var s = d3.event.target.extent();	
+				d3.event.target.extent([Math.round((s[0])/50) * 50,
+				Math.round((s[1])/50) * 50]);
+				d3.event.target(d3.select(this));
+				//console.log(s[0] + " " + s[1] + " " + brush.extent() + " " + brush.empty());
+				if(d3.event.target.empty()) {
+					s = d3.event.target.extent();
+					d3.event.target.extent([Math.round((s[0])/50) * 50,
+					Math.round((s[1]+50)/50) * 50]);
+					d3.event.target(d3.select(this));
+				}
+				xscale_start_new = brush.extent()[0], xscale_end_new = brush.extent()[1];
+				//console.log(xscale_start + " " + xscale_end + " " + xscale_start_new + " " + xscale_end_new);
+				if(xscale_start != xscale_start_new || xscale_end != xscale_end_new) {
+					xscale_start = xscale_start_new;
+					xscale_end = xscale_end_new;
+					main_svg_load(xscale_start, xscale_end);
+				}
+			}
+			
+			canvas_drag.append("g")
+				.attr('id', 'dragpart')
+				.append('text')
+                .attr('transform', 'translate(1040,10)')
+				.style('font-size', '8.5px')
+				.style('font-family', 'verdana')
+                .attr('dy', '.70em')
+                .style('text-anchor', 'end')
+				.style('opacity', '0.6')
+                .text('Drag to vary the range (in multiples of 50 MHz)');
+				
+			canvas_drag.select('#dragpart')
+				.call(brush)
+				.selectAll("rect")
+				.attr("y", 0)
+				.attr('transform', 'translate(40,20)')
+				.attr("height", 10)
+				.style('opacity','0.5');
+				
+			var bgrect = d3.select('.background')
+				.style('visibility', 'visible')
+				.style('opacity','0.3')
+				.style('cursor','crosshair')
+				.on('click',clicked)
+				;
+				
+			function clicked() {
+				//console.log(d3.mouse(this)[0] + " " + x.invert(d3.mouse(this)[0]) + " " + Math.round(x.invert(d3.mouse(this)[0])/50)*50 + " " + Math.round((x.invert(d3.mouse(this)[0])+50)/50)*50);
+				brush.extent([Math.round(x.invert(d3.mouse(this)[0])/50)*50,Math.round((x.invert(d3.mouse(this)[0])+50)/50)*50]);
+				xscale_start = brush.extent()[0], xscale_end = brush.extent()[1];
+				//console.log(x(xscale_start));
+				d3.select('.extent')
+					.attr('x', function(d) {
+						return x(xscale_start);
+					});
+				//console.log(d3.select('.extent').attr('x'));
+				var xpos = +d3.select('.extent').attr('x');
+				var width = +d3.select('.extent').attr('width');
+				var ypos = (xpos + width);
+				var etrans = 'translate('+ypos+',0)';
+				var wtrans = 'translate('+xpos+',0)';
+				d3.select('.resize.e').attr('transform', function () { return etrans; } );
+				d3.select('.resize.w').attr('transform', function () { return wtrans; });
+				main_svg_load(xscale_start, xscale_end);
+			}
+				
+			var canvas = d3.select('#wrapper')
+				.append('svg')
+				.attr('class','main_svg')
+				.attr({
+					'width': 1200,
+					'height': 600
+				})
+				.attr('transform', 'translate(0,60)');
+					
+			function main_svg_load(xscale_start, xscale_end) {
+				
+				d3.select('.main_svg').html('');
+					
+				var xscale = d3.scale.linear()
+					.domain([xscale_start, xscale_end])			
+					.range([0, 1000]);
+				
+				var lines;
+				if (xscale.domain()[1] - xscale.domain()[0] <= 60) { lines = xscale.domain()[1] - xscale.domain()[0]; }
+				else if (xscale.domain()[1] - xscale.domain()[0] < 100) { lines = (xscale.domain()[1] - xscale.domain()[0])/2; }
+				else { 
+					if((xscale.domain()[1] - xscale.domain()[0])/5 <= 30) { lines = (xscale.domain()[1] - xscale.domain()[0])/5; }
+					else if((xscale.domain()[1] - xscale.domain()[0])/10 <= 50) { lines = (xscale.domain()[1] - xscale.domain()[0])/10; }
+					else { lines = (xscale.domain()[1] - xscale.domain()[0])/50; }
+				}
+				
+				console.log(xscale.domain()[0] + " " + xscale.domain()[1] + " " + lines);
+					
+				var yscale = d3.scale.linear()
+					.domain([0, operators.length])
+					.range([20, 510]);
+					
+				var colorScale = d3.scale.ordinal()
+					.domain(bands)
+					.range(color);
+					
+				var patternScale = d3.scale.quantize()
+					.domain([0, 10])
+					.range(patterns);
+					
+				var opacityScale = d3.scale.quantize()
+					.domain([0, 2])
+					.range(opacity);
+					
+				var liberalScale = d3.scale.quantize()
+					.domain([0,1])
+					.range(liberalized);
+					
+				//var linkScale = d3.scale.quantize()
+				//	.domain([0,2])
+				//	.range(updown);
+					
+				/*var dragright = d3.behavior.drag()
+					.origin(Object)
+					.on("drag", rdragresize);
+
+				var dragleft = d3.behavior.drag()
+					.origin(Object)
+					.on("drag", ldragresize);
+					
+				var grect = canvas.append("g")
+					.data([{x: 10, y: 0}]);
+				var width = 1000;
+				
+				var bgrect = grect.append('rect')
+					.attr({'x': 10, 'y': 0, 'height': 10, 'width': width})
+					.attr('class', 'scalebg')
+					.attr('transform', 'translate(70,0)')
+					.attr('fill', 'gray')
+					.attr("fill-opacity", .2)
+					.style('cursor', 'crosshair');
+					
+				var dragrect = grect.append('rect')
+					.attr({'x': 10, 'y': 0, 'height': 10, 'width': width})
+					.attr('class', 'scale-selector')
+					.attr('transform', 'translate(70,0)')
+					.style('cursor', 'move')
+					.attr('fill', 'gray')
+					.attr("fill-opacity", .6);
+
+				var dragbarleft = grect.append("rect")
+					.attr('transform', 'translate(70,0)')
+					.attr("x", 10 - 2.5)
+					.attr("y", 0)
+					.attr("height", 10)
+					.attr("id", "dragleft")
+					.attr("width", 5)
+					.attr("fill", "lightblue")
+					.attr("fill-opacity", 1)
+					.attr("cursor", "ew-resize")
+					.call(dragleft);
+
+				var dragbarright = grect.append("rect")
+					.attr('transform', 'translate(70,0)')
+					.attr("x", 10 + width - 2.5)
+					.attr("y", 0)
+					.attr("height", 10)
+					.attr("id", "dragright")
+					.attr("width", 5)
+					.attr("fill", "lightblue")
+					.attr("fill-opacity", 1)
+					.attr("cursor", "ew-resize")
+					.call(dragright);
+				
+				
+				function ldragresize(d) {
+					var oldx = d.x; 
+					d.x = Math.max(10, Math.min(d.x + width - 2.5, d3.event.x)); 
+					width = width + (oldx - d.x);
+					
+					dragbarleft
+						.attr("x", function(d) { return d.x - 2.5; });
+					   
+					dragrect
+						.attr("x", function(d) { return d.x; })
+						.attr("width", width);
+				}
+
+				function rdragresize(d) {
+					console.log(d.x + " " + width);
+					var dragx = Math.max(d.x + 2.5, Math.min(1010, d.x + width + d3.event.dx));
+
+					//recalculate width
+					width = dragx - d.x;
+
+					//move the right drag handle
+					dragbarright
+						.attr("x", function(d) { return dragx - 2.5 });
+
+					//resize the drag rectangle
+					//as we are only resizing from the right, the x coordinate does not need to change
+					dragrect
+						.attr("width", width);
+				}*/
+				
+				var legend = canvas.append('g')
+					.attr('id', 'legend')
+					.attr('transform', 'translate(1100,50)');
+					
+				var legend_group = legend.selectAll('g')		
+                    .data(bands)
+                    .enter()
+                    .append("g");
+					
+				legend_group.append("circle")
+                                        .attr("r",10)
+										.attr("class",function(d) { return d; })
+                                        .attr("cx",10) 
+                                        .attr("cy",function(d, i){
+											return 30*i - 5;
+                                        })
+                                        .style("fill", function(d) {
+											//console.log(colorScale(d));
+											return colorScale(d); 
+                                        });
+
+									legend_group.append("text")
+                                        .attr("x",function(d,i){
+											return  25;
+                                        }) 
+                                        .attr("y",function(d,i){
+											return 30*i;
+                                        })
+                                        .style("text-anchor", "right")
+                                        .style("font-size","15px")
+                                        .attr("fill","#a53b01")
+                                        .text(function(d) { return d + " MHz"; });
+										
+				var link = canvas.append('g')
+					.attr('id', 'legend')
+					.attr('transform', 'translate(1100,250)');
+					
+				var legend_link = link.selectAll('g')		
+                    .data(updown)
+                    .enter()
+                    .append("g");
+					
+				legend_link.append("text")
+                                        .attr("x",function(d,i){
+											return  5;
+                                        }) 
+                                        .attr("y",function(d,i){
+											return 30*i;
+                                        })
+                                        .style("text-anchor", "right")
+                                        .style("font-size","15px")
+										.style("font-weight", "bold")
+                                        .attr("fill","#000000")
+                                        .text(function(d) { return d + ':'; });
+
+				legend_link.append("text")
+										.attr("x",function(d,i){
+											return  40;
+                                        }) 
+                                        .attr("y",function(d,i){
+											return 30*i;
+                                        })
+                                        .style("text-anchor", "right")
+                                        .style("font-size","15px")
+                                        .attr("fill","#000000")
+                                        .text(function(d) { 
+											if(d == 'U') return 'Uplink';
+											else if(d == 'D') return 'Downlink';
+											else return 'UnPaired';
+										});
+
+				var grid = d3.range(lines+1).map(function(i) {
+					return {
+						'x1': 0,
+						'y1': 20,
+						'x2': 0,
+						'y2': 500
+					};
+				});
+				console.log(grid);
+				
+				var x_grid = d3.range(operators.length).map(function(i) {
+					return {
+						'x1': 0,
+						'y1': 20,
+						'x2': 1000,
+						'y2': 20
+					};
+				});			
+
+				var grids = canvas.append('g')
+					.attr('id', 'grid')
+					.attr('transform', 'translate(40,20)')
+					.selectAll('line')
+					.data(grid)
+					.enter()
+					.append('line')
+					.attr({
+						'x1': function(d, i) {
+							return i * 1000/lines;
+						},
+						'y1': function(d) {
+							return d.y1;
+						},
+						'x2': function(d, i) {
+							return i * 1000/lines;
+						},
+						'y2': function(d) {
+							return d.y2;
+						},
+					})
+					.style({
+						'stroke': '#adadad',
+						'stroke-width': '1px'
+					});
+					
+				var x_grids = canvas.append('g')
+					.attr('id', 'x-grid')
+					.attr('transform', 'translate(40,20)')
+					.selectAll('line')
+					.data(x_grid)
+					.enter()
+					.append('line')
+					.attr({
+						'x1': function(d) {
+							return d.x1;
+						},
+						'y1': function(d, i) {
+							return yscale(i);
+						},
+						'x2': function(d) {
+							return d.x2;
+						},
+						'y2': function(d, i) {
+							return yscale(i);
+						},
+					})
+					.style({
+						/*'stroke': function(d, i) {
+							return colorScale(i)
+						},*/
+						'stroke': '#871202',
+						'stroke-width': '0.5px'
+					});
+
+
+				var xAxis = d3.svg.axis();
+				xAxis
+					.orient('bottom')
+					.scale(xscale);	  
+				  
+				var yAxis = d3.svg.axis();
+				yAxis
+					.orient('left')
+					.scale(yscale)
+					.tickSize(1)
+					.tickFormat(function(d, i) {
+						return operators[i];
+					})
+					.tickValues(d3.range(operators.length));
+				
+
+				var y_xis = canvas.append('g')
+					.attr("transform", "translate(40,20)")
+					.attr('id', 'yaxis')
+					.call(yAxis)
+					.selectAll(".tick text")
+					.each(wrap);
+
+				function wrap(text) {
+					var self = d3.select(this),
+						text = self.text();
+						textLength = text.length;
+					console.log(textLength);
+					while (textLength > (5) && text.length > 0) {
+						text = text.slice(0, -2);
+						self.text(text + '...');
+						textLength = text.length;
+					}
+				}
+										
+				var x_xis = canvas.append('g')
+					.attr("transform", "translate(40,520)")
+					.attr('id', 'xaxis')
+					.call(xAxis);
+					
+				d3.select('#xaxis')
+					.append('text')
+					.attr('transform', 'translate(1005,25)')
+					//.attr('transform', 'rotate(90)')
+					.style('font-size', '12px')
+					.style('font-family', 'verdana')
+					.attr('dy', '.71em')
+					.style('text-anchor', 'end')
+					.style('opacity', '1')
+					.text('Frequency (in MHz)');
+
+				var main_group = canvas.append('g')				//for entire data
+					.attr('class', 'main')
+					.attr("transform", "translate(40,20)");
+				  
+				var sub_groups = main_group.selectAll('g')		// for each row i.e. each operator
+					.data(total)
+					.enter()
+					.append('g')
+					.attr("transform", "translate(0,0)")
+					.attr('class', 'sub');
+				
+				var j = 0;
+				var sub_sub_groups = sub_groups.selectAll('#recttext')		// for each band occupied by a single operator
+					.data(function(d) {
+						console.log(d.opdata);
+						return d.opdata;
+					} );
+					
+				sub_sub_groups
+					.enter()
+					.append('g')
+					//.filter(function(d) { console.log(d.val[2]); return d.val[2] < 900})
+					.attr("transform", "translate(0,0)")
+					.attr('id', 'recttext');
+				
+				sub_sub_groups.append('rect')
+					.filter(function(d) { return d.val[1] >= xscale.domain()[0] && d.val[2] <= xscale.domain()[1]})
+					.attr({
+						'x': function(d) {
+							console.log("d " + d.val[0] + " " + d.val[1] + " " + d.val[2] + " " + d.val[3] + " " + d.val[4] + " " + xscale(d.val[1]) + " " + xscale(d.val[2]));
+							return xscale(d.val[1]);
+						},
+						'y': function(d) {
+							temp = (+d.val[0]+1)
+							//console.log(temp + " " + yscale(d.val[0]) + " " + yscale(temp));
+							return yscale(d.val[0]) + (yscale(temp)-yscale(d.val[0]))/2 - 15;
+						},
+						'height': 30,
+						'width': function(d) {
+							console.log("w " + (d.val[2]-d.val[1]));
+							return xscale(d.val[2]) - xscale(d.val[1]);
+						}
+					})
+					
+					.style('fill', function(d) {
+						console.log("c " + colorScale(d.val[3]));
+						return colorScale(d.val[3]);
+					})
+					.style('opacity', function(d) {
+						console.log("op " + d.val[4]);
+						return opacityScale(d.val[4]);
+					})
+					/*.on("mousemove", function(d){			
+						div.style("left", (d3.event.pageX+3)+"px");			
+						div.style("top", d3.event.pageY-80+"px");
+						div.style("display", "inline-block");
+						div.html("<b>Operator: </b>"+d.val[0]);                              
+					})*/
+					/*.on("mouseout", function(d){			
+						div.style("display", "none");
+						svg.selectAll(".opCircle").attr("opacity","1");
+					})*/;
+					
+				sub_sub_groups.append('text')	
+					.filter(function(d) { return d.val[1] >= xscale.domain()[0] && d.val[2] <= xscale.domain()[1]})
+					.attr("fill","#800000")
+					.attr("font-family","sans-serif")
+					.attr({
+						'x': function(d) {return xscale(d.val[1] + (d.val[2]-d.val[1])/2);}, 
+						'y': function(d) {temp = (+d.val[0]+1); return yscale(d.val[0]) + (yscale(temp)-yscale(d.val[0]) + 5)/2;}
+					})
+					.style("text-anchor", "middle")
+					.style("font-weight", "bold")
+					.text(function(d) { 
+						return d.linkType; 
+					})
+					.attr("font-size",function(d) {
+						console.log("f " + Math.min(10, (xscale(d.val[2])-xscale(d.val[1]))/2));
+						return Math.min(10, (xscale(d.val[2])-xscale(d.val[1]))/2) + "px"; 
+					});
+					
+				/*var legend_group = canvas.selectAll('.legend')
+					.append('g')
+					.attr('class', 'legend')
+					.attr("transform", "translate(980,20)");
+					
+				legend_group.select('.legend')
+					.data(bandTypes)
+					.enter()
+					.append('g')
+					;	
+					
+				legend_group.append('rect')
+					.attr('x',980)
+					.attr('y', function(d, i) { return i*20;})
+					.style('fill', function(d) {return colorScale(d);});
+					
+				legend_group.append('text')
+					.attr('x',1000)
+					.attr('y', function(d, i) { return i*20;})
+					.attr('dy','.35em')
+					.text(function(d) { return d; });*/
+			}
+			
+			main_svg_load(xscale_start,xscale_end);
+		});
+			
+	}
+	barChartFunction("data/bandranges.csv");
+  </script>
+  </div>
+</body>
+
+</html>

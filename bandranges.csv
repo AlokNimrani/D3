@@ -1,0 +1,736 @@
+Circle,Operator,Band,StartFrequency,EndFrequency,LinkType,Liberalized
+Andhra Pradesh,Tata Teleservices Ltd,800,827.175,830.865,U,1
+Andhra Pradesh,Tata Teleservices Ltd,800,872.175,875.865,D,1
+Assam,Reliance Communications Ltd,800,838.515,843.435,U,1
+Assam,Reliance Communications Ltd,800,883.515,888.435,D,1
+Assam,Reliance Jio Infocomm Ltd,800,829.935,834.855,U,1
+Assam,Reliance Jio Infocomm Ltd,800,874.935,879.855,D,1
+Bihar,Reliance Jio Infocomm Ltd,800,840.975,843.435,U,1
+Bihar,Reliance Jio Infocomm Ltd,800,828.405,829.635,U,1
+Bihar,Reliance Jio Infocomm Ltd,800,833.925,835.155,U,1
+Bihar,Reliance Jio Infocomm Ltd,800,885.975,888.435,D,1
+Bihar,Reliance Jio Infocomm Ltd,800,873.405,874.635,D,1
+Bihar,Reliance Jio Infocomm Ltd,800,878.925,880.155,D,1
+Delhi,Tata Teleservices Ltd,800,824.415,825.645,U,1
+Delhi,Tata Teleservices Ltd,800,869.415,870.645,D,1
+Gujarat,Reliance Communications Ltd,800,836.985,839.445,U,1
+Gujarat,Reliance Communications Ltd,800,881.985,884.445,D,1
+Haryana,Reliance Communications Ltd,800,824.415,825.645,U,1
+Haryana,Reliance Communications Ltd,800,869.415,870.645,D,1
+Haryana,Reliance Jio Infocomm Ltd,800,827.175,828.405,U,1
+Haryana,Reliance Jio Infocomm Ltd,800,839.745,843.435,U,1
+Haryana,Reliance Jio Infocomm Ltd,800,872.175,873.405,D,1
+Haryana,Reliance Jio Infocomm Ltd,800,884.745,888.435,D,1
+Haryana,Tata Teleservices Ltd,800,828.405,829.635,U,1
+Haryana,Tata Teleservices Ltd,800,873.405,874.635,D,1
+Himachal Pradesh,Reliance Communications Ltd,800,828.405,830.865,U,1
+Himachal Pradesh,Reliance Communications Ltd,800,873.405,875.865,D,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,800,839.745,843.435,U,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,800,833.925,835.155,U,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,800,884.745,888.435,D,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,800,878.925,880.155,D,1
+Jammu & Kashmir,Reliance Communications Ltd,800,832.695,835.155,U,1
+Jammu & Kashmir,Reliance Communications Ltd,800,877.695,880.155,D,1
+Jammu & Kashmir,Reliance Jio Infocomm Ltd,800,835.155,836.385,U,1
+Jammu & Kashmir,Reliance Jio Infocomm Ltd,800,839.745,843.435,U,1
+Jammu & Kashmir,Reliance Jio Infocomm Ltd,800,880.155,881.385,D,1
+Jammu & Kashmir,Reliance Jio Infocomm Ltd,800,884.745,888.435,D,1
+Kolkata,Reliance Communications Ltd,800,827.175,828.405,U,1
+Kolkata,Reliance Communications Ltd,800,872.175,873.405,D,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,800,829.935,834.855,U,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,800,874.935,879.855,D,1
+Maharashtra,Tata Teleservices Ltd,800,829.935,832.395,U,1
+Maharashtra,Tata Teleservices Ltd,800,874.935,877.395,D,1
+Mumbai,Reliance Jio Infocomm Ltd,800,832.995,837.915,U,1
+Mumbai,Reliance Jio Infocomm Ltd,800,877.995,882.915,D,1
+Mumbai,Tata Teleservices Ltd,800,829.935,832.395,U,1
+Mumbai,Tata Teleservices Ltd,800,874.935,877.395,D,1
+North East,Reliance Communications Ltd,800,829.935,834.855,U,1
+North East,Reliance Communications Ltd,800,874.935,879.855,D,1
+North East,Reliance Jio Infocomm Ltd,800,838.515,843.435,U,1
+North East,Reliance Jio Infocomm Ltd,800,883.515,888.435,D,1
+Odisha,Reliance Communications Ltd,800,828.405,829.635,U,1
+Odisha,Reliance Communications Ltd,800,873.405,874.635,D,1
+Odisha,Reliance Jio Infocomm Ltd,800,839.745,843.435,U,1
+Odisha,Reliance Jio Infocomm Ltd,800,833.925,835.155,U,1
+Odisha,Reliance Jio Infocomm Ltd,800,884.745,888.435,D,1
+Odisha,Reliance Jio Infocomm Ltd,800,878.925,880.155,D,1
+Punjab,Reliance Communications Ltd,800,832.605,835.065,U,1
+Punjab,Reliance Communications Ltd,800,877.605,880.065,D,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,800,840.975,843.435,U,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,800,833.925,835.155,U,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,800,885.975,888.435,D,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,800,878.925,880.155,D,1
+Uttar Pradesh (West),Reliance Communications Ltd,800,835.155,836.385,U,1
+Uttar Pradesh (West),Reliance Communications Ltd,800,880.155,881.385,D,1
+West Bengal,Reliance Communications Ltd,800,842.205,843.435,U,1
+West Bengal,Reliance Communications Ltd,800,887.205,888.435,D,1
+Andhra Pradesh,Bharti Airtel Ltd,900,895.1,902.5,U,1
+Andhra Pradesh,Bharti Airtel Ltd,900,910.5,912.1,U,1
+Andhra Pradesh,Bharti Airtel Ltd,900,940.1,947.5,D,1
+Andhra Pradesh,Bharti Airtel Ltd,900,955.5,957.1,D,1
+Andhra Pradesh,Idea Cellular Ltd,900,890.1,895.1,U,1
+Andhra Pradesh,Idea Cellular Ltd,900,935.1,940.1,D,1
+Assam,Bharti Airtel Ltd,900,896.3,902.5,U,1
+Assam,Bharti Airtel Ltd,900,941.3,947.5,D,1
+Bihar,Bharti Airtel Ltd,900,896.3,897.9,U,1
+Bihar,Bharti Airtel Ltd,900,941.3,942.9,D,1
+Gujarat,Vodafone India Ltd,900,895.1,900.1,U,1
+Gujarat,Vodafone India Ltd,900,910.5,911.5,U,1
+Gujarat,Vodafone India Ltd,900,940.1,945.1,D,1
+Gujarat,Vodafone India Ltd,900,955.5,956.5,D,1
+Gujarat,Idea Cellular Ltd,900,890.1,895.1,U,1
+Gujarat,Idea Cellular Ltd,900,935.1,940.1,D,1
+Haryana,Vodafone India Ltd,900,895.1,901.3,U,1
+Haryana,Vodafone India Ltd,900,940.1,946.3,D,1
+Haryana,Idea Cellular Ltd,900,890.1,895.1,U,1
+Haryana,Idea Cellular Ltd,900,901.3,902.3,U,1
+Haryana,Idea Cellular Ltd,900,935.1,940.1,D,1
+Haryana,Idea Cellular Ltd,900,946.3,947.3,D,1
+Himachal Pradesh,Bharti Airtel Ltd,900,895.1,902.5,U,1
+Himachal Pradesh,Bharti Airtel Ltd,900,940.1,947.5,D,1
+Himachal Pradesh,Reliance Communications Ltd,900,890.1,895.1,U,1
+Himachal Pradesh,Reliance Communications Ltd,900,935.1,940.1,D,1
+Karnataka,Bharti Airtel Ltd,900,895.1,902.5,U,1
+Karnataka,Bharti Airtel Ltd,900,910.5,911.9,U,1
+Karnataka,Bharti Airtel Ltd,900,940.1,947.5,D,1
+Karnataka,Bharti Airtel Ltd,900,955.5,956.9,D,1
+Karnataka,Idea Cellular Ltd,900,890.1,895.1,U,1
+Karnataka,Idea Cellular Ltd,900,935.1,940.1,D,1
+Kerala,Vodafone India Ltd,900,890.1,895.1,U,1
+Kerala,Vodafone India Ltd,900,901.1,902.5,U,1
+Kerala,Vodafone India Ltd,900,935.1,940.1,D,1
+Kerala,Vodafone India Ltd,900,946.1,947.5,D,1
+Kerala,Idea Cellular Ltd,900,895.1,901.1,U,1
+Kerala,Idea Cellular Ltd,900,940.1,946.1,D,1
+Madhya Pradesh,Idea Cellular Ltd,900,895.1,902.5,U,1
+Madhya Pradesh,Idea Cellular Ltd,900,940.1,947.5,D,1
+Madhya Pradesh,Reliance Communications Ltd,900,890.1,895.1,U,1
+Madhya Pradesh,Reliance Communications Ltd,900,935.1,940.1,D,1
+Maharashtra,Vodafone India Ltd,900,890.1,895.1,U,1
+Maharashtra,Vodafone India Ltd,900,935.1,940.1,D,1
+Maharashtra,Idea Cellular Ltd,900,895.1,902.5,U,1
+Maharashtra,Idea Cellular Ltd,900,910.5,912.1,U,1
+Maharashtra,Idea Cellular Ltd,900,940.1,947.5,D,1
+Maharashtra,Idea Cellular Ltd,900,955.5,957.1,D,1
+North East,Bharti Airtel Ltd,900,894.5,902.5,U,1
+North East,Bharti Airtel Ltd,900,907.7,908.5,U,1
+North East,Bharti Airtel Ltd,900,939.5,947.5,D,1
+North East,Bharti Airtel Ltd,900,952.7,953.5,D,1
+Odisha,Vodafone India Ltd,900,896.3,901.3,U,1
+Odisha,Vodafone India Ltd,900,941.3,946.3,D,1
+Odisha,Bharti Airtel Ltd,900,901.3,902.5,U,1
+Odisha,Bharti Airtel Ltd,900,946.3,947.5,D,1
+Punjab,Bharti Airtel Ltd,900,895.1,902.5,U,1
+Punjab,Bharti Airtel Ltd,900,906.5,907.3,U,1
+Punjab,Bharti Airtel Ltd,900,909.5,909.7,U,1
+Punjab,Bharti Airtel Ltd,900,910.5,912.1,U,1
+Punjab,Bharti Airtel Ltd,900,940.1,947.5,D,1
+Punjab,Bharti Airtel Ltd,900,951.5,952.3,D,1
+Punjab,Bharti Airtel Ltd,900,954.5,954.7,D,1
+Punjab,Bharti Airtel Ltd,900,955.5,957.1,D,1
+Punjab,Idea Cellular Ltd,900,890.1,895.1,U,1
+Punjab,Idea Cellular Ltd,900,909.7,910.3,U,1
+Punjab,Idea Cellular Ltd,900,935.1,940.1,D,1
+Punjab,Idea Cellular Ltd,900,954.7,955.3,D,1
+Rajasthan,Vodafone India Ltd,900,895.1,901.5,U,1
+Rajasthan,Vodafone India Ltd,900,940.1,946.5,D,1
+Rajasthan,Bharti Airtel Ltd,900,890.1,895.1,U,1
+Rajasthan,Bharti Airtel Ltd,900,901.5,902.5,U,1
+Rajasthan,Bharti Airtel Ltd,900,935.1,940.1,D,1
+Rajasthan,Bharti Airtel Ltd,900,946.5,947.5,D,1
+Uttar Pradesh (East),Vodafone India Ltd,900,896.3,901.9,U,1
+Uttar Pradesh (East),Vodafone India Ltd,900,941.3,946.9,D,1
+Uttar Pradesh (West),Idea Cellular Ltd,900,896.3,901.3,U,1
+Uttar Pradesh (West),Idea Cellular Ltd,900,941.3,946.3,D,1
+West Bengal,Vodafone India Ltd,900,898.1,900.3,U,1
+West Bengal,Vodafone India Ltd,900,943.1,945.3,D,1
+West Bengal,Bharti Airtel Ltd,900,900.3,902.5,U,1
+West Bengal,Bharti Airtel Ltd,900,945.3,947.5,D,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1745.3,1746.5,U,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1840.3,1841.5,D,1
+Andhra Pradesh,Tata Teleservices Ltd,1800,1746.5,1749.1,U,1
+Andhra Pradesh,Tata Teleservices Ltd,1800,1841.5,1844.1,D,1
+Gujarat,Vodafone India Ltd,1800,1732.9,1735.5,U,1
+Gujarat,Vodafone India Ltd,1800,1720.7,1721.1,U,1
+Gujarat,Vodafone India Ltd,1800,1764.5,1764.9,U,1
+Gujarat,Vodafone India Ltd,1800,1827.9,1830.5,D,1
+Gujarat,Vodafone India Ltd,1800,1815.7,1816.1,D,1
+Gujarat,Vodafone India Ltd,1800,1859.5,1859.9,D,1
+Haryana,Bharti Airtel Ltd,1800,1718.7,1719.1,U,1
+Haryana,Bharti Airtel Ltd,1800,1743.9,1745.1,U,1
+Haryana,Bharti Airtel Ltd,1800,1762.9,1764.7,U,1
+Haryana,Bharti Airtel Ltd,1800,1813.7,1814.1,D,1
+Haryana,Bharti Airtel Ltd,1800,1838.9,1840.1,D,1
+Haryana,Bharti Airtel Ltd,1800,1857.9,1859.7,D,1
+Haryana,Reliance Communications Ltd,1800,1743.3,1743.9,U,1
+Haryana,Reliance Communications Ltd,1800,1838.3,1838.9,D,1
+Haryana,Reliance Jio Infocomm Ltd,1800,1718.3,1718.7,U,1
+Haryana,Reliance Jio Infocomm Ltd,1800,1733.1,1736.7,U,1
+Haryana,Reliance Jio Infocomm Ltd,1800,1813.3,1813.7,D,1
+Haryana,Reliance Jio Infocomm Ltd,1800,1828.1,1831.7,D,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1713.9,1714.1,U,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1716.7,1720.9,U,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1763.3,1763.7,U,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1808.9,1809.1,D,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1811.7,1815.9,D,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1858.3,1858.7,D,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,1800,1743.7,1746.7,U,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,1800,1760.9,1763.3,U,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,1800,1838.7,1841.7,D,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,1800,1855.9,1858.3,D,1
+Karnataka,Idea Cellular Ltd,1800,1714.5,1714.7,U,1
+Karnataka,Idea Cellular Ltd,1800,1722.5,1723.3,U,1
+Karnataka,Idea Cellular Ltd,1800,1809.5,1809.7,D,1
+Karnataka,Idea Cellular Ltd,1800,1817.5,1818.3,D,1
+Karnataka,Reliance Communications Ltd,1800,1714.7,1715.1,U,1
+Karnataka,Reliance Communications Ltd,1800,1743.5,1743.7,U,1
+Karnataka,Reliance Communications Ltd,1800,1809.7,1810.1,D,1
+Karnataka,Reliance Communications Ltd,1800,1838.5,1838.7,D,1
+Kerala,Vodafone India Ltd,1800,1746.3,1747.3,U,1
+Kerala,Vodafone India Ltd,1800,1841.3,1842.3,D,1
+Kolkata,Bharti Airtel Ltd,1800,1760.5,1762.5,U,1
+Kolkata,Bharti Airtel Ltd,1800,1855.5,1857.5,D,1
+Kolkata,Reliance Jio Infocomm Ltd,1800,1740.9,1745.9,U,1
+Kolkata,Reliance Jio Infocomm Ltd,1800,1835.9,1840.9,D,1
+North East,Bharti Airtel Ltd,1800,1762.3,1763.9,U,1
+North East,Bharti Airtel Ltd,1800,1857.3,1858.9,D,1
+North East,Idea Cellular Ltd,1800,1763.9,1764.9,U,1
+North East,Idea Cellular Ltd,1800,1858.9,1859.9,D,1
+North East,Reliance Communications Ltd,1800,1724.7,1726.1,U,1
+North East,Reliance Communications Ltd,1800,1728.1,1730.9,U,1
+North East,Reliance Communications Ltd,1800,1751.1,1751.9,U,1
+North East,Reliance Communications Ltd,1800,1819.7,1821.1,D,1
+North East,Reliance Communications Ltd,1800,1823.1,1825.9,D,1
+North East,Reliance Communications Ltd,1800,1846.1,1846.9,D,1
+Odisha,Bharti Airtel Ltd,1800,1746.7,1751.7,U,1
+Odisha,Bharti Airtel Ltd,1800,1753.7,1754.9,U,1
+Odisha,Bharti Airtel Ltd,1800,1841.7,1846.7,D,1
+Odisha,Bharti Airtel Ltd,1800,1848.7,1849.9,D,1
+Odisha,Idea Cellular Ltd,1800,1736.7,1741.7,U,1
+Odisha,Idea Cellular Ltd,1800,1831.7,1836.7,D,1
+Odisha,Reliance Communications Ltd,1800,1741.7,1746.7,U,1
+Odisha,Reliance Communications Ltd,1800,1836.7,1841.7,D,1
+Punjab,Bharti Airtel Ltd,1800,1749.7,1750.7,U,1
+Punjab,Bharti Airtel Ltd,1800,1844.7,1845.7,D,1
+Punjab,Reliance Communications Ltd,1800,1749.1,1749.7,U,1
+Punjab,Reliance Communications Ltd,1800,1844.1,1844.7,D,1
+Rajasthan,Reliance Jio Infocomm Ltd,1800,1732.7,1736.1,U,1
+Rajasthan,Reliance Jio Infocomm Ltd,1800,1743.9,1748.9,U,1
+Rajasthan,Reliance Jio Infocomm Ltd,1800,1752.1,1753.7,U,1
+Rajasthan,Reliance Jio Infocomm Ltd,1800,1827.7,1831.1,D,1
+Rajasthan,Reliance Jio Infocomm Ltd,1800,1838.9,1843.9,D,1
+Rajasthan,Reliance Jio Infocomm Ltd,1800,1847.1,1848.7,D,1
+Tamil Nadu,Aircel Ltd,1800,1725.5,1729.9,U,1
+Tamil Nadu,Aircel Ltd,1800,1743.5,1748.5,U,1
+Tamil Nadu,Aircel Ltd,1800,1756.9,1757.5,U,1
+Tamil Nadu,Aircel Ltd,1800,1820.5,1824.9,D,1
+Tamil Nadu,Aircel Ltd,1800,1838.5,1843.5,D,1
+Tamil Nadu,Aircel Ltd,1800,1851.9,1852.5,D,1
+Tamil Nadu,Idea Cellular Ltd,1800,1751.7,1756.7,U,1
+Tamil Nadu,Idea Cellular Ltd,1800,1757.5,1758.9,U,1
+Tamil Nadu,Idea Cellular Ltd,1800,1846.7,1851.7,D,1
+Tamil Nadu,Idea Cellular Ltd,1800,1852.5,1853.9,D,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,1800,1758.9,1759.5,U,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,1800,1853.9,1854.5,D,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1720.5,1720.9,U,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1717.5,1718.3,U,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1815.5,1815.9,D,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1812.5,1813.3,D,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,1800,1714.5,1717.5,U,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,1800,1809.5,1812.5,D,1
+Uttar Pradesh (West),Idea Cellular Ltd,1800,1711.9,1713.7,U,1
+Uttar Pradesh (West),Idea Cellular Ltd,1800,1763.3,1763.7,U,1
+Uttar Pradesh (West),Idea Cellular Ltd,1800,1806.9,1808.7,D,1
+Uttar Pradesh (West),Idea Cellular Ltd,1800,1858.3,1858.7,D,1
+Assam,Vodafone India Ltd,2100,1954,1959,U,1
+Assam,Vodafone India Ltd,2100,2144,2149,D,1
+Gujarat,Bharti Airtel Ltd,2100,1954,1959,U,1
+Gujarat,Bharti Airtel Ltd,2100,2144,2149,D,1
+Haryana,Bharti Airtel Ltd,2100,1954,1959,U,1
+Haryana,Bharti Airtel Ltd,2100,2144,2149,D,1
+Karnataka,Vodafone India Ltd,2100,1954,1959,U ,1
+Karnataka,Vodafone India Ltd,2100,2144,2149,D,1
+Kerala,Vodafone India Ltd,2100,1954,1959,U ,1
+Kerala,Vodafone India Ltd,2100,2144,2149,D,1
+Kolkata,Idea Cellular Ltd,2100,1954,1959,U ,1
+Kolkata,Idea Cellular Ltd,2100,2144,2149,D,1
+Madhya Pradesh,Bharti Airtel Ltd,2100,1954,1959,U ,1
+Madhya Pradesh,Bharti Airtel Ltd,2100,2144,2149,D,1
+Maharashtra,Bharti Airtel Ltd,2100,1954,1959,U ,1
+Maharashtra,Bharti Airtel Ltd,2100,2144,2149,D,1
+North East,Vodafone India Ltd,2100,1954,1959,U ,1
+North East,Vodafone India Ltd,2100,2144,2149,D,1
+Odisha,Bharti Airtel Ltd,2100,1954,1959,U ,1
+Odisha,Bharti Airtel Ltd,2100,2144,2149,D,1
+Rajasthan,Vodafone India Ltd,2100,1954,1959,U ,1
+Rajasthan,Vodafone India Ltd,2100,2144,2149,D,1
+Tamil Nadu,Bharti Airtel Ltd,2100,1954,1959,U ,1
+Tamil Nadu,Bharti Airtel Ltd,2100,2144,2149,D,1
+Uttar Pradesh (East),Bharti Airtel Ltd,2100,1954,1959,U ,1
+Uttar Pradesh (East),Bharti Airtel Ltd,2100,2144,2149,D,1
+Uttar Pradesh (West),Vodafone India Ltd,2100,1954,1959,U ,1
+Uttar Pradesh (West),Vodafone India Ltd,2100,2144,2149,D,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1724.3,1729.3,U,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1744.7,1745.3,U,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1734.5,1736.5,U,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1756.9,1758.1,U,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1819.3,1824.3,D,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1839.7,1840.3,D,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1829.5,1831.5,D,1
+Andhra Pradesh,Bharti Airtel Ltd,1800,1851.9,1853.1,D,1
+Andhra Pradesh,Idea Cellular Ltd,1800,1729.3,1734.3,U,1
+Andhra Pradesh,Idea Cellular Ltd,1800,1743.7,1744.7,U,1
+Andhra Pradesh,Idea Cellular Ltd,1800,1824.3,1829.3,D,1
+Andhra Pradesh,Idea Cellular Ltd,1800,1838.7,1839.7,D,1
+Andhra Pradesh,Reliance Jio Infocomm Ltd,1800,1751.7,1756.7,U,1
+Andhra Pradesh,Reliance Jio Infocomm Ltd,1800,1742.9,1743.7,U,1
+Andhra Pradesh,Reliance Jio Infocomm Ltd,1800,1846.7,1851.7,D,1
+Andhra Pradesh,Reliance Jio Infocomm Ltd,1800,1837.9,1838.7,D,1
+Andhra Pradesh,Telewings Communications Services Private Ltd,1800,1741.5,1742.9,U,1
+Andhra Pradesh,Telewings Communications Services Private Ltd,1800,1836.5,1837.9,D,1
+Andhra Pradesh,Vodafone India Ltd,1800,1740.9,1741.5,U,1
+Andhra Pradesh,Vodafone India Ltd,1800,1835.9,1836.5,D,1
+Assam,Reliance Jio Infocomm Ltd,1800,1722.5,1727.5,U,1
+Assam,Reliance Jio Infocomm Ltd,1800,1749.5,1749.9,U,1
+Assam,Reliance Jio Infocomm Ltd,1800,1817.5,1822.5,D,1
+Assam,Reliance Jio Infocomm Ltd,1800,1844.5,1844.9,D,1
+Assam,Telewings Communications Services Private Ltd,1800,1762.7,1764.9,U,1
+Assam,Telewings Communications Services Private Ltd,1800,1758.7,1760.9,U,1
+Assam,Telewings Communications Services Private Ltd,1800,1741.7,1742.9,U,1
+Assam,Telewings Communications Services Private Ltd,1800,1749.1,1749.5,U,1
+Assam,Telewings Communications Services Private Ltd,1800,1857.7,1859.9,D,1
+Assam,Telewings Communications Services Private Ltd,1800,1853.7,1855.9,D,1
+Assam,Telewings Communications Services Private Ltd,1800,1836.7,1837.9,D,1
+Assam,Telewings Communications Services Private Ltd,1800,1844.1,1844.5,D,1
+Bihar,Telewings Communications Services Private Ltd,1800,1760.7,1761.5,U,1
+Bihar,Telewings Communications Services Private Ltd,1800,1747.5,1748.9,U,1
+Bihar,Telewings Communications Services Private Ltd,1800,1855.7,1856.5,D,1
+Bihar,Telewings Communications Services Private Ltd,1800,1842.5,1843.9,D,1
+Delhi,Reliance Jio Infocomm Ltd,1800,1723.1,1728.1,U,1
+Delhi,Reliance Jio Infocomm Ltd,1800,1746.3,1746.7,U,1
+Delhi,Reliance Jio Infocomm Ltd,1800,1818.1,1823.1,D,1
+Delhi,Reliance Jio Infocomm Ltd,1800,1841.3,1841.7,D,1
+Delhi,Bharti Airtel Ltd,1800,1753.3,1758.3,U,1
+Delhi,Bharti Airtel Ltd,1800,1719.7,1720.1,U,1
+Delhi,Bharti Airtel Ltd,1800,1730.5,1731.5,U,1
+Delhi,Bharti Airtel Ltd,1800,1745.7,1746.3,U,1
+Delhi,Bharti Airtel Ltd,1800,1848.3,1853.3,D,1
+Delhi,Bharti Airtel Ltd,1800,1814.7,1815.1,D,1
+Delhi,Bharti Airtel Ltd,1800,1825.5,1826.5,D,1
+Delhi,Bharti Airtel Ltd,1800,1840.7,1841.3,D,1
+Delhi,Vodafone India Ltd,1800,1758.3,1763.3,U,1
+Delhi,Vodafone India Ltd,1800,1710.7,1712.1,U,1
+Delhi,Vodafone India Ltd,1800,1718.1,1719.7,U,1
+Delhi,Vodafone India Ltd,1800,1853.3,1858.3,D,1
+Delhi,Vodafone India Ltd,1800,1805.7,1807.1,D,1
+Delhi,Vodafone India Ltd,1800,1813.1,1814.7,D,1
+Delhi,Idea Cellular Ltd,1800,1710.1,1710.7,U,1
+Delhi,Idea Cellular Ltd,1800,1805.1,1805.7,D,1
+Gujarat,Reliance Jio Infocomm Ltd,1800,1743.7,1748.7,U,1
+Gujarat,Reliance Jio Infocomm Ltd,1800,1748.9,1749.9,U,1
+Gujarat,Reliance Jio Infocomm Ltd,1800,1838.7,1843.7,D,1
+Gujarat,Reliance Jio Infocomm Ltd,1800,1843.9,1844.9,D,1
+Gujarat,Vodafone India Ltd,1800,1722.7,1725.5,U,1
+Gujarat,Vodafone India Ltd,1800,1715.3,1716.9,U,1
+Gujarat,Vodafone India Ltd,1800,1817.7,1820.5,D,1
+Gujarat,Vodafone India Ltd,1800,1810.3,1811.9,D,1
+Gujarat,Idea Cellular Ltd,1800,1721.1,1722.7,U,1
+Gujarat,Idea Cellular Ltd,1800,1816.1,1817.7,D,1
+Haryana,Idea Cellular Ltd,1800,1710.1,1715.1,U,1
+Haryana,Idea Cellular Ltd,1800,1719.1,1719.5,U,1
+Haryana,Idea Cellular Ltd,1800,1729.3,1729.9,U,1
+Haryana,Idea Cellular Ltd,1800,1805.1,1810.1,D,1
+Haryana,Idea Cellular Ltd,1800,1814.1,1814.5,D,1
+Haryana,Idea Cellular Ltd,1800,1824.3,1824.9,D,1
+Haryana,Vodafone India Ltd,1800,1743.5,1745.1,U,1
+Haryana,Vodafone India Ltd,1800,1718.3,1719.1,U,1
+Haryana,Vodafone India Ltd,1800,1838.5,1840.1,D,1
+Haryana,Vodafone India Ltd,1800,1813.3,1814.1,D,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1721.1,1726.1,U,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1761.1,1763.7,U,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1738.3,1739.9,U,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1726.3,1726.9,U,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1731.3,1731.7,U,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1816.1,1821.1,D,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1856.1,1858.7,D,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1833.3,1834.9,D,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1821.3,1821.9,D,1
+Himachal Pradesh,Bharti Airtel Ltd,1800,1826.3,1826.7,D,1
+Jammu & Kashmir,Aircel Ltd,1800,1724.7,1725.5,U,1
+Jammu & Kashmir,Aircel Ltd,1800,1730.1,1731.1,U,1
+Jammu & Kashmir,Aircel Ltd,1800,1819.7,1820.5,D,1
+Jammu & Kashmir,Aircel Ltd,1800,1825.1,1826.1,D,1
+Jammu & Kashmir,Bharti Airtel Ltd,1800,1722.1,1724.7,U,1
+Jammu & Kashmir,Bharti Airtel Ltd,1800,1817.1,1819.7,D,1
+Karnataka,Bharti Airtel Ltd,1800,1723.5,1728.5,U,1
+Karnataka,Bharti Airtel Ltd,1800,1744.3,1746.5,U,1
+Karnataka,Bharti Airtel Ltd,1800,1728.7,1729.9,U,1
+Karnataka,Bharti Airtel Ltd,1800,1714.7,1715.1,U,1
+Karnataka,Bharti Airtel Ltd,1800,1818.5,1823.5,D,1
+Karnataka,Bharti Airtel Ltd,1800,1839.3,1841.5,D,1
+Karnataka,Bharti Airtel Ltd,1800,1823.7,1824.9,D,1
+Karnataka,Bharti Airtel Ltd,1800,1809.7,1810.1,D,1
+Karnataka,Vodafone India Ltd,1800,1733.3,1738.3,U,1
+Karnataka,Vodafone India Ltd,1800,1828.3,1833.3,D,1
+Karnataka,Idea Cellular Ltd,1800,1738.3,1743.3,U,1
+Karnataka,Idea Cellular Ltd,1800,1833.3,1838.3,D,1
+Karnataka,Reliance Jio Infocomm Ltd,1800,1759.9,1764.9,U,1
+Karnataka,Reliance Jio Infocomm Ltd,1800,1854.9,1859.9,D,1
+Kerala,Idea Cellular Ltd,1800,1719.1,1724.1,U,1
+Kerala,Idea Cellular Ltd,1800,1751.7,1756.7,U,1
+Kerala,Idea Cellular Ltd,1800,1814.1,1819.1,D,1
+Kerala,Idea Cellular Ltd,1800,1846.7,1851.7,D,1
+Kerala,Vodafone India Ltd,1800,1724.1,1729.1,U,1
+Kerala,Vodafone India Ltd,1800,1747.3,1749.3,U,1
+Kerala,Vodafone India Ltd,1800,1819.1,1824.1,D,1
+Kerala,Vodafone India Ltd,1800,1842.3,1844.3,D,1
+Kerala,Bharti Airtel Ltd,1800,1730.9,1735.9,U,1
+Kerala,Bharti Airtel Ltd,1800,1825.9,1830.9,D,1
+Kerala,Reliance Jio Infocomm Ltd,1800,1741.1,1746.1,U,1
+Kerala,Reliance Jio Infocomm Ltd,1800,1836.1,1841.1,D,1
+Kolkata,Vodafone India Ltd,1800,1716.9,1721.9,U,1
+Kolkata,Vodafone India Ltd,1800,1762.5,1764.3,U,1
+Kolkata,Vodafone India Ltd,1800,1747.9,1749.1,U,1
+Kolkata,Vodafone India Ltd,1800,1811.9,1816.9,D,1
+Kolkata,Vodafone India Ltd,1800,1857.5,1859.3,D,1
+Kolkata,Vodafone India Ltd,1800,1842.9,1844.1,D,1
+Kolkata,Bharti Airtel Ltd,1800,1721.9,1726.9,U,1
+Kolkata,Bharti Airtel Ltd,1800,1816.9,1821.9,D,1
+Kolkata,Reliance Jio Infocomm Ltd,1800,1726.9,1731.9,U,1
+Kolkata,Reliance Jio Infocomm Ltd,1800,1821.9,1826.9,D,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1737.9,1742.9,U,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1764.7,1764.9,U,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1745.7,1746.5,U,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1714.5,1715.1,U,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1723.7,1724.1,U,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1832.9,1837.9,D,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1859.7,1859.9,D,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1840.7,1841.5,D,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1809.5,1810.1,D,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1818.7,1819.1,D,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,1800,1751.1,1756.1,U,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,1800,1728.5,1728.9,U,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,1800,1763.7,1764.7,U,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,1800,1846.1,1851.1,D,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,1800,1823.5,1823.9,D,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,1800,1858.7,1859.7,D,1
+Madhya Pradesh,Bharti Airtel Ltd,1800,1756.3,1759.9,U,1
+Madhya Pradesh,Bharti Airtel Ltd,1800,1726.3,1728.5,U,1
+Madhya Pradesh,Bharti Airtel Ltd,1800,1851.3,1854.9,D,1
+Madhya Pradesh,Bharti Airtel Ltd,1800,1821.3,1823.5,D,1
+Maharashtra,Reliance Jio Infocomm Ltd,1800,1724.5,1729.5,U,1
+Maharashtra,Reliance Jio Infocomm Ltd,1800,1819.5,1824.5,D,1
+Maharashtra,Idea Cellular Ltd,1800,1710.1,1715.1,U,1
+Maharashtra,Idea Cellular Ltd,1800,1761.9,1764.9,U,1
+Maharashtra,Idea Cellular Ltd,1800,1758.9,1759.9,U,1
+Maharashtra,Idea Cellular Ltd,1800,1805.1,1810.1,D,1
+Maharashtra,Idea Cellular Ltd,1800,1856.9,1859.9,D,1
+Maharashtra,Idea Cellular Ltd,1800,1853.9,1854.9,D,1
+Mumbai,Bharti Airtel Ltd,1800,1710.1,1715.1,U,1
+Mumbai,Bharti Airtel Ltd,1800,1760.9,1761.1,U,1
+Mumbai,Bharti Airtel Ltd,1800,1737.3,1738.1,U,1
+Mumbai,Bharti Airtel Ltd,1800,1805.1,1810.1,D,1
+Mumbai,Bharti Airtel Ltd,1800,1855.9,1856.1,D,1
+Mumbai,Bharti Airtel Ltd,1800,1832.3,1833.1,D,1
+Mumbai,Reliance Jio Infocomm Ltd,1800,1749.1,1754.1,U,1
+Mumbai,Reliance Jio Infocomm Ltd,1800,1759.3,1760.9,U,1
+Mumbai,Reliance Jio Infocomm Ltd,1800,1844.1,1849.1,D,1
+Mumbai,Reliance Jio Infocomm Ltd,1800,1854.3,1855.9,D,1
+Mumbai,Vodafone India Ltd,1800,1754.1,1759.1,U,1
+Mumbai,Vodafone India Ltd,1800,1717.9,1718.1,U,1
+Mumbai,Vodafone India Ltd,1800,1761.9,1764.9,U,1
+Mumbai,Vodafone India Ltd,1800,1849.1,1854.1,D,1
+Mumbai,Vodafone India Ltd,1800,1812.9,1813.1,D,1
+Mumbai,Vodafone India Ltd,1800,1856.9,1859.9,D,1
+Mumbai,Idea Cellular Ltd,1800,1715.9,1717.9,U,1
+Mumbai,Idea Cellular Ltd,1800,1810.9,1812.9,D,1
+Mumbai,Reliance Communications Ltd,1800,1715.3,1715.9,U,1
+Mumbai,Reliance Communications Ltd,1800,1810.3,1810.9,D,1
+North East,Bharti Airtel Ltd,1800,1719.5,1724.5,U,1
+North East,Bharti Airtel Ltd,1800,1726.1,1728.1,U,1
+North East,Bharti Airtel Ltd,1800,1814.5,1819.5,D,1
+North East,Bharti Airtel Ltd,1800,1821.1,1823.1,D,1
+North East,Reliance Jio Infocomm Ltd,1800,1739.1,1744.1,U,1
+North East,Reliance Jio Infocomm Ltd,1800,1751.1,1751.9,U,1
+North East,Reliance Jio Infocomm Ltd,1800,1725.5,1726.1,U,1
+North East,Reliance Jio Infocomm Ltd,1800,1834.1,1839.1,D,1
+North East,Reliance Jio Infocomm Ltd,1800,1846.1,1846.9,D,1
+North East,Reliance Jio Infocomm Ltd,1800,1820.5,1821.1,D,1
+North East,Idea Cellular Ltd,1800,1757.1,1762.1,U,1
+North East,Idea Cellular Ltd,1800,1852.1,1857.1,D,1
+North East,Aircel Ltd,1800,1749.3,1751.1,U,1
+North East,Aircel Ltd,1800,1844.3,1846.1,D,1
+Odisha,Bharti Airtel Ltd,1800,1715.3,1720.3,U,1
+Odisha,Bharti Airtel Ltd,1800,1810.3,1815.3,D,1
+Odisha,Reliance Jio Infocomm Ltd,1800,1723.1,1728.1,U,1
+Odisha,Reliance Jio Infocomm Ltd,1800,1818.1,1823.1,D,1
+Punjab,Bharti Airtel Ltd,1800,1754.1,1759.1,U,1
+Punjab,Bharti Airtel Ltd,1800,1761.1,1761.7,U,1
+Punjab,Bharti Airtel Ltd,1800,1743.3,1745.1,U,1
+Punjab,Bharti Airtel Ltd,1800,1721.1,1721.9,U,1
+Punjab,Bharti Airtel Ltd,1800,1849.1,1854.1,D,1
+Punjab,Bharti Airtel Ltd,1800,1856.1,1856.7,D,1
+Punjab,Bharti Airtel Ltd,1800,1838.3,1840.1,D,1
+Punjab,Bharti Airtel Ltd,1800,1816.1,1816.9,D,1
+Punjab,Idea Cellular Ltd,1800,1710.1,1715.1,U,1
+Punjab,Idea Cellular Ltd,1800,1750.7,1751.9,U,1
+Punjab,Idea Cellular Ltd,1800,1759.3,1761.1,U,1
+Punjab,Idea Cellular Ltd,1800,1805.1,1810.1,D,1
+Punjab,Idea Cellular Ltd,1800,1845.7,1846.9,D,1
+Punjab,Idea Cellular Ltd,1800,1854.3,1856.1,D,1
+Punjab,Vodafone India Ltd,1800,1750.1,1750.7,U,1
+Punjab,Vodafone India Ltd,1800,1845.1,1845.7,D,1
+Rajasthan,Bharti Airtel Ltd,1800,1738.9,1743.9,U,1
+Rajasthan,Bharti Airtel Ltd,1800,1750.5,1752.1,U,1
+Rajasthan,Bharti Airtel Ltd,1800,1720.9,1722.5,U,1
+Rajasthan,Bharti Airtel Ltd,1800,1833.9,1838.9,D,1
+Rajasthan,Bharti Airtel Ltd,1800,1845.5,1847.1,D,1
+Rajasthan,Bharti Airtel Ltd,1800,1815.9,1817.5,D,1
+Rajasthan,Aircel Ltd,1800,1736.9,1737.1,U,1
+Rajasthan,Aircel Ltd,1800,1749.1,1750.5,U,1
+Rajasthan,Aircel Ltd,1800,1831.9,1832.1,D,1
+Rajasthan,Aircel Ltd,1800,1844.1,1845.5,D,1
+Rajasthan,Vodafone India Ltd,1800,1736.1,1736.9,U,1
+Rajasthan,Vodafone India Ltd,1800,1831.1,1831.9,D,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,1800,1720.3,1725.3,U,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,1800,1749.1,1750.3,U,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,1800,1815.3,1820.3,D,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,1800,1844.1,1845.3,D,1
+Tamil Nadu,Bharti Airtel Ltd,1800,1738.5,1743.5,U,1
+Tamil Nadu,Bharti Airtel Ltd,1800,1833.5,1838.5,D,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1722.3,1722.7,U,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1733.3,1735.9,U,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1749.3,1750.3,U,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1817.3,1817.7,D,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1828.3,1830.9,D,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1844.3,1845.3,D,1
+Uttar Pradesh (East),Telewings Communications Services Private Ltd,1800,1720.5,1722.3,U,1
+Uttar Pradesh (East),Telewings Communications Services Private Ltd,1800,1815.5,1817.3,D,1
+Uttar Pradesh (East),Aircel Ltd,1800,1718.7,1720.5,U,1
+Uttar Pradesh (East),Aircel Ltd,1800,1813.7,1815.5,D,1
+Uttar Pradesh (West),Telewings Communications Services Private Ltd,1800,1744.1,1744.9,U,1
+Uttar Pradesh (West),Telewings Communications Services Private Ltd,1800,1762.5,1763.7,U,1
+Uttar Pradesh (West),Telewings Communications Services Private Ltd,1800,1839.1,1839.9,D,1
+Uttar Pradesh (West),Telewings Communications Services Private Ltd,1800,1857.5,1858.7,D,1
+West Bengal,Reliance Jio Infocomm Ltd,1800,1716.1,1721.1,U,1
+West Bengal,Reliance Jio Infocomm Ltd,1800,1760.5,1761.1,U,1
+West Bengal,Reliance Jio Infocomm Ltd,1800,1811.1,1816.1,D,1
+West Bengal,Reliance Jio Infocomm Ltd,1800,1855.5,1856.1,D,1
+West Bengal,Aircel Ltd,1800,1759.3,1760.5,U,1
+West Bengal,Aircel Ltd,1800,1854.3,1855.5,D,1
+West Bengal,Bharti Airtel Ltd,1800,1735.5,1739.9,U,1
+West Bengal,Bharti Airtel Ltd,1800,1830.5,1834.9,D,1
+Delhi,Bharti Airtel Ltd,900,900.1,906.1,U,1
+Delhi,Bharti Airtel Ltd,900,945.1,951.1,D,1
+Delhi,Vodafone India Ltd,900,895.1,900.1,U,1
+Delhi,Vodafone India Ltd,900,940.1,945.1,D,1
+Delhi,Idea Cellular Ltd,900,890.1,895.1,U,1
+Delhi,Idea Cellular Ltd,900,935.1,940.1,D,1
+Kolkata,Bharti Airtel Ltd,900,895.1,900.1,U,1
+Kolkata,Bharti Airtel Ltd,900,909.5,911.5,U,1
+Kolkata,Bharti Airtel Ltd,900,940.1,945.1,D,1
+Kolkata,Bharti Airtel Ltd,900,954.5,956.5,D,1
+Kolkata,Vodafone India Ltd,900,890.1,895.1,U,1
+Kolkata,Vodafone India Ltd,900,900.1,902.1,U,1
+Kolkata,Vodafone India Ltd,900,935.1,940.1,D,1
+Kolkata,Vodafone India Ltd,900,945.1,947.1,D,1
+Mumbai,Bharti Airtel Ltd,900,909.9,914.9,U,1
+Mumbai,Bharti Airtel Ltd,900,954.9,959.9,D,1
+Mumbai,Vodafone India Ltd,900,890.1,900.1,U,1
+Mumbai,Vodafone India Ltd,900,906.7,907.7,U,1
+Mumbai,Vodafone India Ltd,900,935.1,945.1,D,1
+Mumbai,Vodafone India Ltd,900,951.7,952.7,D,1
+Gujarat,Reliance Jio Infocomm Ltd,800,829.935,831.165,U,1
+Gujarat,Reliance Jio Infocomm Ltd,800,839.445,843.135,U,1
+Gujarat,Reliance Jio Infocomm Ltd,800,874.935,876.165,D,1
+Gujarat,Reliance Jio Infocomm Ltd,800,884.445,888.135,D,1
+Punjab,Reliance Jio Infocomm Ltd,800,825.945,829.635,U,1
+Punjab,Reliance Jio Infocomm Ltd,800,870.945,874.635,D,1
+Rajasthan,Reliance Jio Infocomm Ltd,800,827.175,832.095,U,1
+Rajasthan,Reliance Jio Infocomm Ltd,800,872.175,877.095,D,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,800,825.945,827.175,U,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,800,870.945,872.175,D,1
+Andhra Pradesh,Tata Teleservices Ltd,1800,1741.7,1744.1,U,1
+Andhra Pradesh,Tata Teleservices Ltd,1800,1836.7,1839.1,D,1
+Assam,Bharti Airtel Ltd,1800,1743.7,1747.5,U,1
+Assam,Bharti Airtel Ltd,1800,1838.7,1842.5,D,1
+Assam,Idea Cellular Ltd,1800,1738.7,1743.7,U,1
+Assam,Idea Cellular Ltd,1800,1833.7,1838.7,D,1
+Assam,Vodafone India Ltd,1800,1730.7,1738.7,U,1
+Assam,Vodafone India Ltd,1800,1825.7,1833.7,D,1
+Bihar,Aircel Ltd,1800,1736.5,1738.3,U,1
+Bihar,Aircel Ltd,1800,1831.5,1833.3,D,1
+Bihar,Idea Cellular Ltd,1800,1726.5,1731.5,U,1
+Bihar,Idea Cellular Ltd,1800,1821.5,1826.5,D,1
+Bihar,Reliance Jio Infocomm Ltd,1800,1731.5,1736.5,U,1
+Bihar,Reliance Jio Infocomm Ltd,1800,1826.5,1831.5,D,1
+Delhi,Vodafone India Ltd,1800,1731.3,1733.3,U,1
+Delhi,Vodafone India Ltd,1800,1826.3,1828.3,D,1
+Gujarat,Idea Cellular Ltd,1800,1735.7,1744.1,U,1
+Gujarat,Idea Cellular Ltd,1800,1830.7,1839.1,D,1
+Gujarat,Vodafone India Ltd,1800,1744.1,1747.1,U,1
+Gujarat,Vodafone India Ltd,1800,1839.1,1842.1,D,1
+Haryana,Bharti Airtel Ltd,1800,1735.3,1736.9,U,1
+Haryana,Bharti Airtel Ltd,1800,1830.3,1831.9,D,1
+Haryana,Idea Cellular Ltd,1800,1736.9,1741.7,U,1
+Haryana,Idea Cellular Ltd,1800,1831.9,1836.7,D,1
+Haryana,Reliance Jio Infocomm Ltd,1800,1734.3,1735.3,U,1
+Haryana,Reliance Jio Infocomm Ltd,1800,1829.3,1830.3,D,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1732.1,1732.7,U,1
+Himachal Pradesh,Idea Cellular Ltd,1800,1827.1,1827.7,D,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,1800,1732.7,1737.7,U,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,1800,1827.7,1832.7,D,1
+Jammu & Kashmir,Bharti Airtel Ltd,1800,1747.9,1750.3,U,1
+Jammu & Kashmir,Bharti Airtel Ltd,1800,1842.9,1845.3,D,1
+Jammu & Kashmir,Idea Cellular Ltd,1800,1750.3,1755.3,U,1
+Jammu & Kashmir,Idea Cellular Ltd,1800,1845.3,1850.3,D,1
+Jammu & Kashmir,Reliance Communications Ltd,1800,1742.9,1747.9,U,1
+Jammu & Kashmir,Reliance Communications Ltd,1800,1837.9,1842.9,D,1
+Jammu & Kashmir,Reliance Jio Infocomm Ltd,1800,1732.9,1742.9,U,1
+Jammu & Kashmir,Reliance Jio Infocomm Ltd,1800,1827.9,1837.9,D,1
+Kerala,Vodafone India Ltd,1800,1739.7,1740.3,U,1
+Kerala,Vodafone India Ltd,1800,1834.7,1835.3,D,1
+Kolkata,Bharti Airtel Ltd,1800,1742.3,1744.3,U,1
+Kolkata,Bharti Airtel Ltd,1800,1837.3,1839.3,D,1
+Kolkata,Vodafone India Ltd,1800,1740.3,1742.3,U,1
+Kolkata,Vodafone India Ltd,1800,1835.3,1837.3,D,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1737.1,1741.7,U,1
+Madhya Pradesh,Idea Cellular Ltd,1800,1832.1,1836.7,D,1
+Maharashtra,Bharti Airtel Ltd,1800,1751.5,1756.5,U,1
+Maharashtra,Bharti Airtel Ltd,1800,1846.5,1851.5,D,1
+Maharashtra,Idea Cellular Ltd,1800,1761.5,1763.5,U,1
+Maharashtra,Idea Cellular Ltd,1800,1856.5,1858.5,D,1
+Maharashtra,Tata Teleservices Ltd,1800,1756.5,1761.5,U,1
+Maharashtra,Tata Teleservices Ltd,1800,1851.5,1856.5,D,1
+Mumbai,Tata Teleservices Ltd,1800,1759.9,1764.9,U,1
+Mumbai,Tata Teleservices Ltd,1800,1854.9,1859.9,D,1
+North East,Bharti Airtel Ltd,1800,1753.5,1754.9,U,1
+North East,Bharti Airtel Ltd,1800,1848.5,1849.9,D,1
+North East,Vodafone India Ltd,1800,1745.7,1753.5,U,1
+North East,Vodafone India Ltd,1800,1840.7,1848.5,D,1
+Punjab,Bharti Airtel Ltd,1800,1740.3,1741.1,U,1
+Punjab,Bharti Airtel Ltd,1800,1835.3,1836.1,D,1
+Punjab,Idea Cellular Ltd,1800,1738.3,1740.3,U,1
+Punjab,Idea Cellular Ltd,1800,1833.3,1835.3,D,1
+Punjab,Reliance Jio Infocomm Ltd,1800,1730.1,1735.3,U,1
+Punjab,Reliance Jio Infocomm Ltd,1800,1825.1,1830.3,D,1
+Punjab,Vodafone India Ltd,1800,1735.3,1738.3,U,1
+Punjab,Vodafone India Ltd,1800,1830.3,1833.3,D,1
+Rajasthan,Bharti Airtel Ltd,1800,1740.1,1741.9,U,1
+Rajasthan,Bharti Airtel Ltd,1800,1835.1,1836.9,D,1
+Rajasthan,Idea Cellular Ltd,1800,1730.9,1735.9,U,1
+Rajasthan,Idea Cellular Ltd,1800,1825.9,1830.9,D,1
+Rajasthan,Vodafone India Ltd,1800,1735.9,1740.1,U,1
+Rajasthan,Vodafone India Ltd,1800,1830.9,1835.1,D,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,1800,1733.5,1736.9,U,1
+Uttar Pradesh (East),Reliance Jio Infocomm Ltd,1800,1828.5,1831.9,D,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1736.9,1738.9,U,1
+Uttar Pradesh (East),Vodafone India Ltd,1800,1831.9,1833.9,D,1
+Uttar Pradesh (West),Idea Cellular Ltd,1800,1734.5,1741.7,U,1
+Uttar Pradesh (West),Idea Cellular Ltd,1800,1829.5,1836.7,D,1
+Uttar Pradesh (West),Reliance Jio Infocomm Ltd,1800,1729.5,1734.5,U,1
+Uttar Pradesh (West),Reliance Jio Infocomm Ltd,1800,1824.5,1829.5,D,1
+Uttar Pradesh (West),Vodafone India Ltd,1800,1727.1,1729.5,U,1
+Uttar Pradesh (West),Vodafone India Ltd,1800,1822.1,1824.5,D,1
+West Bengal,Idea Cellular Ltd,1800,1741.7,1746.7,U,1
+West Bengal,Idea Cellular Ltd,1800,1836.7,1841.7,D,1
+West Bengal,Reliance Jio Infocomm Ltd,1800,1746.7,1751.7,U,1
+West Bengal,Reliance Jio Infocomm Ltd,1800,1841.7,1846.7,D,1
+West Bengal,Vodafone India Ltd,1800,1734.1,1741.7,U,1
+West Bengal,Vodafone India Ltd,1800,1829.1,1836.7,D,1
+Bihar,Bharti Airtel Ltd,2100,1944,1949,U,1
+Bihar,Bharti Airtel Ltd,2100,2134,2139,D,1
+Bihar,Idea Cellular Ltd,2100,1939,1944,U,1
+Bihar,Idea Cellular Ltd,2100,2129,2134,D,1
+Delhi,Bharti Airtel Ltd,2100,1939,1944,U,1
+Delhi,Bharti Airtel Ltd,2100,2129,2134,D,1
+Haryana,Vodafone India Ltd,2100,1939,1944,U,1
+Haryana,Vodafone India Ltd,2100,2129,2134,D,1
+Jammu & Kashmir,Bharti Airtel Ltd,2100,1939,1944,U,1
+Jammu & Kashmir,Bharti Airtel Ltd,2100,2129,2134,D,1
+Kerala,Bharti Airtel Ltd,2100,1939,1944,U,1
+Kerala,Bharti Airtel Ltd,2100,2129,2134,D,1
+Maharashtra,Vodafone India Ltd,2100,1939,1944,U,1
+Maharashtra,Vodafone India Ltd,2100,2129,2134,D,1
+Mumbai,Idea Cellular Ltd,2100,1939,1944,U,1
+Mumbai,Idea Cellular Ltd,2100,2129,2134,D,1
+Odisha,Vodafone India Ltd,2100,1939,1944,U,1
+Odisha,Vodafone India Ltd,2100,2129,2134,D,1
+Punjab,Vodafone India Ltd,2100,1939,1944,U,1
+Punjab,Vodafone India Ltd,2100,2129,2134,D,1
+Rajasthan,Bharti Airtel Ltd,2100,1944,1949,U,1
+Rajasthan,Bharti Airtel Ltd,2100,2134,2139,D,1
+Rajasthan,Idea Cellular Ltd,2100,1949,1954,U,1
+Rajasthan,Idea Cellular Ltd,2100,2139,2144,D,1
+Rajasthan,Vodafone India Ltd,2100,1939,1944,U,1
+Rajasthan,Vodafone India Ltd,2100,2129,2134,D,1
+Tamil Nadu,Vodafone India Ltd,2100,1939,1949,U,1
+Tamil Nadu,Vodafone India Ltd,2100,2129,2139,D,1
+Uttar Pradesh (East),Idea Cellular Ltd,2100,1944,1949,U,1
+Uttar Pradesh (East),Idea Cellular Ltd,2100,2134,2139,D,1
+Uttar Pradesh (East),Vodafone India Ltd,2100,1939,1944,U,1
+Uttar Pradesh (East),Vodafone India Ltd,2100,2129,2134,D,1
+Andhra Pradesh,Bharti Airtel Ltd,2300,2325,2335,U/P,1
+Andhra Pradesh,Reliance Jio Infocomm Ltd,2300,2335,2345,U/P,1
+Assam,Bharti Airtel Ltd,2300,2347.5,2357.5,U/P,1
+Assam,Reliance Jio Infocomm Ltd,2300,2357.5,2367.5,U/P,1
+Bihar,Bharti Airtel Ltd,2300,2357.5,2367.5,U/P,1
+Bihar,Reliance Jio Infocomm Ltd,2300,2367.5,2377.5,U/P,1
+Delhi,Bharti Airtel Ltd,2300,2350,2360,U/P,1
+Delhi,Reliance Jio Infocomm Ltd,2300,2360,2370,U/P,1
+Gujarat,Bharti Airtel Ltd,2300,2350,2360,U/P,1
+Gujarat,Reliance Jio Infocomm Ltd,2300,2360,2370,U/P,1
+Himachal Pradesh,Bharti Airtel Ltd,2300,2377.5,2387.5,U/P,1
+Himachal Pradesh,Reliance Jio Infocomm Ltd,2300,2367.5,2377.5,U/P,1
+Karnataka,Bharti Airtel Ltd,2300,2350,2360,U/P,1
+Karnataka,Reliance Jio Infocomm Ltd,2300,2360,2370,U/P,1
+Kerala,Idea Cellular Ltd,2300,2360,2370,U/P,1
+Kerala,Reliance Jio Infocomm Ltd,2300,2350,2360,U/P,1
+Kolkata,Bharti Airtel Ltd,2300,2355,2365,U/P,1
+Kolkata,Reliance Jio Infocomm Ltd,2300,2365,2375,U/P,1
+Madhya Pradesh,Idea Cellular Ltd,2300,2352.5,2362.5,U/P,1
+Madhya Pradesh,Reliance Jio Infocomm Ltd,2300,2362.5,2372.5,U/P,1
+Maharashtra,Idea Cellular Ltd,2300,2365,2375,U/P,1
+Maharashtra,Reliance Jio Infocomm Ltd,2300,2355,2365,U/P,1
+Mumbai,Bharti Airtel Ltd,2300,2355,2365,U/P,1
+Mumbai,Reliance Jio Infocomm Ltd,2300,2365,2375,U/P,1
+North East,Bharti Airtel Ltd,2300,2357.5,2367.5,U/P,1
+North East,Reliance Jio Infocomm Ltd,2300,2347.5,2357.5,U/P,1
+Odisha,Bharti Airtel Ltd,2300,2388,2398,U/P,1
+Odisha,Reliance Jio Infocomm Ltd,2300,2378,2388,U/P,1
+Tamil Nadu,Bharti Airtel Ltd,2300,2357.5,2367.5,U/P,1
+Tamil Nadu,Reliance Jio Infocomm Ltd,2300,2367.5,2377.5,U/P,1
+West Bengal,Bharti Airtel Ltd,2300,2355,2365,U/P,1
+West Bengal,Reliance Jio Infocomm Ltd,2300,2365,2375,U/P,1
+Andhra Pradesh,Idea Cellular Ltd,2500,2635,2645,U/P,1
+Assam,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Assam,Vodafone India Ltd,2500,2545,2555,U/P,1
+Bihar,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Delhi,Vodafone India Ltd,2500,2635,2655,U/P,1
+Gujarat,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Gujarat,Vodafone India Ltd,2500,2635,2655,U/P,1
+Haryana,Idea Cellular Ltd,2500,2545,2555,U/P,1
+Haryana,Vodafone India Ltd,2500,2535,2545,U/P,1
+Himachal Pradesh,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Jammu & Kashmir,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Kerala,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Kerala,Vodafone India Ltd,2500,2545,2555,U/P,1
+Kolkata,Vodafone India Ltd,2500,2635,2655,U/P,1
+Madhya Pradesh,Idea Cellular Ltd,2500,2535,2555,U/P,1
+Maharashtra,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Maharashtra,Vodafone India Ltd,2500,2635,2655,U/P,1
+Mumbai,Vodafone India Ltd,2500,2635,2655,U/P,1
+North East,Idea Cellular Ltd,2500,2535,2545,U/P,1
+North East,Vodafone India Ltd,2500,2545,2555,U/P,1
+Odisha,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Odisha,Vodafone India Ltd,2500,2545,2555,U/P,1
+Punjab,Vodafone India Ltd,2500,2535,2545,U/P,1
+Rajasthan,Idea Cellular Ltd,2500,2535,2545,U/P,1
+Rajasthan,Vodafone India Ltd,2500,2545,2555,U/P,1
+Uttar Pradesh (East),Idea Cellular Ltd,2500,2535,2545,U/P,1
+Uttar Pradesh (East),Vodafone India Ltd,2500,2545,2555,U/P,1
+Uttar Pradesh (West),Idea Cellular Ltd,2500,2535,2545,U/P,1
+Uttar Pradesh (West),Vodafone India Ltd,2500,2545,2555,U/P,1
+West Bengal,Idea Cellular Ltd,2500,2545,2555,U/P,1
+West Bengal,Vodafone India Ltd,2500,2535,2545,U/P,1
