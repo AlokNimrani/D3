@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Dsnap - Charts</title>
+  	<title>Dsnap - Charts</title>
  
 	<style>
 		#xaxis .domain{
@@ -29,7 +29,7 @@
 		}
 	</style>
 	
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -121,14 +121,12 @@
 				.extent([x_start, x_end])
 				.on("brush", brush);
 				
-			//console.log(brush.extent());
-
 			function brush() {
 				var s = d3.event.target.extent();	
 				d3.event.target.extent([Math.round((s[0])/50) * 50,
 				Math.round((s[1])/50) * 50]);
 				d3.event.target(d3.select(this));
-				//console.log(s[0] + " " + s[1] + " " + brush.extent() + " " + brush.empty());
+				
 				if(d3.event.target.empty()) {
 					s = d3.event.target.extent();
 					d3.event.target.extent([Math.round((s[0])/50) * 50,
@@ -136,7 +134,7 @@
 					d3.event.target(d3.select(this));
 				}
 				xscale_start_new = brush.extent()[0], xscale_end_new = brush.extent()[1];
-				//console.log(xscale_start + " " + xscale_end + " " + xscale_start_new + " " + xscale_end_new);
+				
 				if(xscale_start != xscale_start_new || xscale_end != xscale_end_new) {
 					xscale_start = xscale_start_new;
 					xscale_end = xscale_end_new;
@@ -147,13 +145,13 @@
 			canvas_drag.append("g")
 				.attr('id', 'dragpart')
 				.append('text')
-                .attr('transform', 'translate(1040,10)')
+                		.attr('transform', 'translate(1040,10)')
 				.style('font-size', '8.5px')
 				.style('font-family', 'verdana')
-                .attr('dy', '.70em')
-                .style('text-anchor', 'end')
+                		.attr('dy', '.70em')
+                		.style('text-anchor', 'end')
 				.style('opacity', '0.6')
-                .text('Drag to vary the range (in multiples of 50 MHz)');
+                		.text('Drag to vary the range (in multiples of 50 MHz)');
 				
 			canvas_drag.select('#dragpart')
 				.call(brush)
@@ -171,15 +169,14 @@
 				;
 				
 			function clicked() {
-				//console.log(d3.mouse(this)[0] + " " + x.invert(d3.mouse(this)[0]) + " " + Math.round(x.invert(d3.mouse(this)[0])/50)*50 + " " + Math.round((x.invert(d3.mouse(this)[0])+50)/50)*50);
 				brush.extent([Math.round(x.invert(d3.mouse(this)[0])/50)*50,Math.round((x.invert(d3.mouse(this)[0])+50)/50)*50]);
 				xscale_start = brush.extent()[0], xscale_end = brush.extent()[1];
-				//console.log(x(xscale_start));
+				
 				d3.select('.extent')
 					.attr('x', function(d) {
 						return x(xscale_start);
 					});
-				//console.log(d3.select('.extent').attr('x'));
+				
 				var xpos = +d3.select('.extent').attr('x');
 				var width = +d3.select('.extent').attr('width');
 				var ypos = (xpos + width);
@@ -216,8 +213,6 @@
 					else { lines = (xscale.domain()[1] - xscale.domain()[0])/50; }
 				}
 				
-				console.log(xscale.domain()[0] + " " + xscale.domain()[1] + " " + lines);
-					
 				var yscale = d3.scale.linear()
 					.domain([0, operators.length])
 					.range([20, 510]);
@@ -238,120 +233,32 @@
 					.domain([0,1])
 					.range(liberalized);
 					
-				//var linkScale = d3.scale.quantize()
-				//	.domain([0,2])
-				//	.range(updown);
-					
-				/*var dragright = d3.behavior.drag()
-					.origin(Object)
-					.on("drag", rdragresize);
-
-				var dragleft = d3.behavior.drag()
-					.origin(Object)
-					.on("drag", ldragresize);
-					
-				var grect = canvas.append("g")
-					.data([{x: 10, y: 0}]);
-				var width = 1000;
-				
-				var bgrect = grect.append('rect')
-					.attr({'x': 10, 'y': 0, 'height': 10, 'width': width})
-					.attr('class', 'scalebg')
-					.attr('transform', 'translate(70,0)')
-					.attr('fill', 'gray')
-					.attr("fill-opacity", .2)
-					.style('cursor', 'crosshair');
-					
-				var dragrect = grect.append('rect')
-					.attr({'x': 10, 'y': 0, 'height': 10, 'width': width})
-					.attr('class', 'scale-selector')
-					.attr('transform', 'translate(70,0)')
-					.style('cursor', 'move')
-					.attr('fill', 'gray')
-					.attr("fill-opacity", .6);
-
-				var dragbarleft = grect.append("rect")
-					.attr('transform', 'translate(70,0)')
-					.attr("x", 10 - 2.5)
-					.attr("y", 0)
-					.attr("height", 10)
-					.attr("id", "dragleft")
-					.attr("width", 5)
-					.attr("fill", "lightblue")
-					.attr("fill-opacity", 1)
-					.attr("cursor", "ew-resize")
-					.call(dragleft);
-
-				var dragbarright = grect.append("rect")
-					.attr('transform', 'translate(70,0)')
-					.attr("x", 10 + width - 2.5)
-					.attr("y", 0)
-					.attr("height", 10)
-					.attr("id", "dragright")
-					.attr("width", 5)
-					.attr("fill", "lightblue")
-					.attr("fill-opacity", 1)
-					.attr("cursor", "ew-resize")
-					.call(dragright);
-				
-				
-				function ldragresize(d) {
-					var oldx = d.x; 
-					d.x = Math.max(10, Math.min(d.x + width - 2.5, d3.event.x)); 
-					width = width + (oldx - d.x);
-					
-					dragbarleft
-						.attr("x", function(d) { return d.x - 2.5; });
-					   
-					dragrect
-						.attr("x", function(d) { return d.x; })
-						.attr("width", width);
-				}
-
-				function rdragresize(d) {
-					console.log(d.x + " " + width);
-					var dragx = Math.max(d.x + 2.5, Math.min(1010, d.x + width + d3.event.dx));
-
-					//recalculate width
-					width = dragx - d.x;
-
-					//move the right drag handle
-					dragbarright
-						.attr("x", function(d) { return dragx - 2.5 });
-
-					//resize the drag rectangle
-					//as we are only resizing from the right, the x coordinate does not need to change
-					dragrect
-						.attr("width", width);
-				}*/
-				
 				var legend = canvas.append('g')
 					.attr('id', 'legend')
 					.attr('transform', 'translate(1100,50)');
 					
 				var legend_group = legend.selectAll('g')		
-                    .data(bands)
-                    .enter()
-                    .append("g");
+                    			.data(bands)
+                    			.enter()
+                    			.append("g");
 					
 				legend_group.append("circle")
                                         .attr("r",10)
-										.attr("class",function(d) { return d; })
+					.attr("class",function(d) { return d; })
                                         .attr("cx",10) 
                                         .attr("cy",function(d, i){
-											return 30*i - 5;
+						return 30*i - 5;
                                         })
                                         .style("fill", function(d) {
-											//console.log(colorScale(d));
-											return colorScale(d); 
+						return colorScale(d); 
                                         });
 
-									legend_group.append("text")
+				legend_group.append("text")
                                         .attr("x",function(d,i){
-											return  25;
+						return  25;
                                         }) 
                                         .attr("y",function(d,i){
-											return 30*i;
+						return 30*i;
                                         })
                                         .style("text-anchor", "right")
                                         .style("font-size","15px")
@@ -363,38 +270,38 @@
 					.attr('transform', 'translate(1100,250)');
 					
 				var legend_link = link.selectAll('g')		
-                    .data(updown)
-                    .enter()
-                    .append("g");
+                    			.data(updown)
+                    			.enter()
+                    			.append("g");
 					
 				legend_link.append("text")
                                         .attr("x",function(d,i){
-											return  5;
+						return  5;
                                         }) 
                                         .attr("y",function(d,i){
-											return 30*i;
+						return 30*i;
                                         })
                                         .style("text-anchor", "right")
                                         .style("font-size","15px")
-										.style("font-weight", "bold")
+					.style("font-weight", "bold")
                                         .attr("fill","#000000")
                                         .text(function(d) { return d + ':'; });
 
 				legend_link.append("text")
-										.attr("x",function(d,i){
-											return  40;
+					.attr("x",function(d,i){
+						return  40;
                                         }) 
                                         .attr("y",function(d,i){
-											return 30*i;
+						return 30*i;
                                         })
                                         .style("text-anchor", "right")
                                         .style("font-size","15px")
                                         .attr("fill","#000000")
                                         .text(function(d) { 
-											if(d == 'U') return 'Uplink';
-											else if(d == 'D') return 'Downlink';
-											else return 'UnPaired';
-										});
+						if(d == 'U') return 'Uplink';
+						else if(d == 'D') return 'Downlink';
+						else return 'UnPaired';
+					});
 
 				var grid = d3.range(lines+1).map(function(i) {
 					return {
@@ -404,7 +311,6 @@
 						'y2': 500
 					};
 				});
-				console.log(grid);
 				
 				var x_grid = d3.range(operators.length).map(function(i) {
 					return {
@@ -463,20 +369,19 @@
 						},
 					})
 					.style({
-						/*'stroke': function(d, i) {
-							return colorScale(i)
-						},*/
 						'stroke': '#871202',
 						'stroke-width': '0.5px'
 					});
 
 
 				var xAxis = d3.svg.axis();
+				
 				xAxis
 					.orient('bottom')
 					.scale(xscale);	  
 				  
 				var yAxis = d3.svg.axis();
+				
 				yAxis
 					.orient('left')
 					.scale(yscale)
@@ -514,7 +419,6 @@
 				d3.select('#xaxis')
 					.append('text')
 					.attr('transform', 'translate(1005,25)')
-					//.attr('transform', 'rotate(90)')
 					.style('font-size', '12px')
 					.style('font-family', 'verdana')
 					.attr('dy', '.71em')
@@ -543,7 +447,6 @@
 				sub_sub_groups
 					.enter()
 					.append('g')
-					//.filter(function(d) { console.log(d.val[2]); return d.val[2] < 900})
 					.attr("transform", "translate(0,0)")
 					.attr('id', 'recttext');
 				
@@ -556,7 +459,6 @@
 						},
 						'y': function(d) {
 							temp = (+d.val[0]+1)
-							//console.log(temp + " " + yscale(d.val[0]) + " " + yscale(temp));
 							return yscale(d.val[0]) + (yscale(temp)-yscale(d.val[0]))/2 - 15;
 						},
 						'height': 30,
@@ -603,34 +505,13 @@
 						return Math.min(10, (xscale(d.val[2])-xscale(d.val[1]))/2) + "px"; 
 					});
 					
-				/*var legend_group = canvas.selectAll('.legend')
-					.append('g')
-					.attr('class', 'legend')
-					.attr("transform", "translate(980,20)");
-					
-				legend_group.select('.legend')
-					.data(bandTypes)
-					.enter()
-					.append('g')
-					;	
-					
-				legend_group.append('rect')
-					.attr('x',980)
-					.attr('y', function(d, i) { return i*20;})
-					.style('fill', function(d) {return colorScale(d);});
-					
-				legend_group.append('text')
-					.attr('x',1000)
-					.attr('y', function(d, i) { return i*20;})
-					.attr('dy','.35em')
-					.text(function(d) { return d; });*/
 			}
 			
 			main_svg_load(xscale_start,xscale_end);
 		});
 			
 	}
-	barChartFunction("data/bandranges.csv");
+	barChartFunction("bandranges.csv");
   </script>
   </div>
 </body>
