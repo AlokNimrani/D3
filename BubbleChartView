@@ -2,32 +2,31 @@
 <html>
 
 <head>
-	<title>Dsnap - Charts</title>
+	<title>Spectrum Visualization</title>
  
 	<!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="CSS/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap -->
+    	<!-- Bootstrap -->
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src="js/d3.v3.min.js"></script>
-	<script src="js/topojson.v1.js"></script>
+	<script src="JS/d3.v3.min.js"></script>
+	<script src="JS/topojson.v1.js"></script>
 	<script src="http://dimplejs.org/dist/dimple.v2.2.0.min.js"></script>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="JS/jquery.min.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="JS/bootstrap.min.js"></script>
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/base/jquery-ui.css" rel="stylesheet">
 		
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>    
 		
-	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-	<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+	<script type="text/javascript" src="JS/bootstrap-multiselect.js"></script>
+	<link rel="stylesheet" href="CSS/bootstrap-multiselect.css" type="text/css"/>
 	
 	<style>
-	
-		body { font: 12px Arial;}
+	body { font: 12px Arial;}
         
         ul li {
             list-style: none;
@@ -41,9 +40,9 @@
         rect.bordered {
 			stroke: #E6E6E6;
 			stroke-width:2px;   
-		} 
+	} 
 
-		.chartToolTip {
+	.chartToolTip {
             position: absolute;
             display: none;
             width: auto;
@@ -60,34 +59,30 @@
         }
 	</style>
 	
-	
- 
 	<style>
-		#xaxis .domain{
+	#xaxis .domain{
 		  fill: none;
 		  stroke: #000;
-		}
+	}
 		
-		#dragaxis path, #dragaxis line {
+	#dragaxis path, #dragaxis line {
 		fill: none;
 		stroke: #000;
 		shape-rendering: crispEdges;
 		opacity: 0.6;
 		stroke-opacity: 0.6;
-		}
+	}
 		
-		#xaxis text,
-		#yaxis text{
+	#xaxis text,
+	#yaxis text{
 		  font-size: 12px;
-		}
+	}
 		
-		#dragaxis text {
+	#dragaxis text {
 			font-size: 8px;
 			opacity: 0.6;
-		}
+	}
 	</style>
-	
-  <script src="js/d3.v3.min.js"></script>
 </head>
 
 <body>
@@ -97,35 +92,35 @@
 	<h3 id='bblchartheadding'> <center> Circle-Operator wise Spectrum Holdings </center> </h3>
     
 	<div id="bubbleChart_SectrumHoldings"></div>
-    <script type="text/javascript">
+    	<script type="text/javascript">
 							
 		var div = d3.select("body").append("div").attr("class", "chartToolTip");
 							
 		function holdingsBubbleChart(datafile)
-        {
+        	{
 
-            var colors_g = [ "#FF0000", "#1AD43E", "#008080", "#ff6600", "#cc9900", "#850A4B", "#008000", "#66b3ff", "#993333", "#ff7733", "#28ff00", "#8b0707", "#651097", "#9f6f8a", "#20B8BA", "#df663a","#885500", "#dc3912", "#80ffff", "#109618", "#F0301D", "#A5F40F"];
-                                
+			var colors_g = [ "#FF0000", "#1AD43E", "#008080", "#ff6600", "#cc9900", "#850A4B", "#008000", "#66b3ff", "#993333", "#ff7733", "#28ff00", "#8b0707", "#651097", "#9f6f8a", "#20B8BA", "#df663a","#885500", "#dc3912", "#80ffff", "#109618", "#F0301D", "#A5F40F"];
+
 			var diameter = window.innerWidth,						//defining the canvas
-                format = d3.format(",d"),	
-                color  = d3.scale.ordinal().range(colors_g);	
-									
-            var bubble = d3.layout.pack()							//pack layout for the bubble chart
-                .sort(null)		
-                .size([diameter*0.8, diameter*0.8])		
-                .padding(1.5);	
+				format = d3.format(",d"),	
+				color  = d3.scale.ordinal().range(colors_g);	
 
-            var svg = d3.select("#bubbleChart_SectrumHoldings").append("svg")
-                .attr("width", diameter)
-                .attr("height", diameter)
-                .attr("class", "bubble");
+			 var bubble = d3.layout.pack()							//pack layout for the bubble chart
+				.sort(null)		
+				.size([diameter*0.8, diameter*0.8])		
+				.padding(1.5);	
 
-            var mainClasses = [];
+			var svg = d3.select("#bubbleChart_SectrumHoldings").append("svg")
+				.attr("width", diameter)
+				.attr("height", diameter)
+				.attr("class", "bubble");
 
-            d3.json(datafile, function(error, root) {
-								  
+			var mainClasses = [];
+
+			d3.json(datafile, function(error, root) {
+
 				if (error) throw error;
-									
+
 				var node = svg.selectAll(".node")							
 					.data(
 						bubble.nodes(classes(root))								//creates a pack layout from the data
@@ -137,17 +132,17 @@
 					.append("g")
 					.attr("class", "node")				
 					.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });	
-							
+
 				node.append("circle")						
 					.attr("r", function(d) { return d.r; })
 					.attr("class",function(d) { return "opCircle "+d.circleId; })
 					.style("fill", function(d) { return color(d.packageName); })
 					.on("mousemove", function(d){			
 						var dataformat='Total Spectrum';
-											 
+
 						svg.selectAll(".opCircle").attr("opacity","0.15");	
 						svg.selectAll("."+d.circleId).attr("opacity","1");	
-											
+
 						div.style("left", (d3.event.pageX+3)+"px");			
 						div.style("top", d3.event.pageY-80+"px");
 						div.style("display", "inline-block");
@@ -172,10 +167,10 @@
 					.each(wrap)
 					.on("mousemove", function(d){			
 						var dataformat='Total Spectrum';
-											 
+
 						svg.selectAll(".opCircle").attr("opacity","0.15");	
 						svg.selectAll("."+d.circleId).attr("opacity","1");	
-												
+
 						div.style("left", (d3.event.pageX+3)+"px");			
 						div.style("top", d3.event.pageY-80+"px");
 						div.style("display", "inline-block");
@@ -185,7 +180,7 @@
 						div.style("display", "none");
 						svg.selectAll(".opCircle").attr("opacity","1");
 					});
-											
+
 				var legend = svg.selectAll(".legend")							//legend area
 					.data(mainClasses)
 					.enter()
@@ -206,7 +201,7 @@
 					.on("mousemove", function(d){			
 						svg.selectAll(".opCircle").attr("opacity","0.15");	
 						svg.selectAll("."+d.circleId).attr("opacity","1");	
-											
+
 						div.style("left", (d3.event.pageX+3)+"px");			
 						div.style("top", d3.event.pageY-80+"px");
 						div.style("display", "inline-block");
@@ -231,7 +226,7 @@
 					.on("mousemove", function(d){			
 						svg.selectAll(".opCircle").attr("opacity","0.15");	
 						svg.selectAll("."+d.circleId).attr("opacity","1");	
-											
+
 						div.style("left", (d3.event.pageX+3)+"px");			
 						div.style("top", d3.event.pageY-80+"px");
 						div.style("display", "inline-block");
@@ -241,8 +236,8 @@
 						div.style("display", "none");
 						svg.selectAll(".opCircle").attr("opacity","1");
 					});
-            });
-								
+			});
+
 			function wrap(text) {
 				var self = d3.select(this),
 					text = self.text(),
@@ -254,8 +249,8 @@
 				}
 			}
 
-            //Returns a flattened hierarchy containing all leaf nodes under the root.
-            function classes(root) { 
+			//Returns a flattened hierarchy containing all leaf nodes under the root.
+			function classes(root) { 
 				var classes = [];
 				var i = -1;
 				function recurse(name, node) {
@@ -268,8 +263,8 @@
 						}
 						node.children.forEach(function(child)		
 						{ 
-                            recurse(child.name, child); 
-                        });
+							recurse(child.name, child); 
+						});
 					}
 					else	
 					{
@@ -279,16 +274,14 @@
 
 				recurse(null, root);
 				return {children: classes};	
-            }
+			}
 
-            d3.select(self.frameElement).style("height", diameter + "px");
-        }
+			d3.select(self.frameElement).style("height", diameter + "px");
+		}
         
 		holdingsBubbleChart("Data/SpectrumHoldings.json");            			//passing the data                
                            
 	</script>
-    </div>
-	
+    	</div>	
 </body>
-
 </html>
