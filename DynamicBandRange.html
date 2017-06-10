@@ -90,7 +90,7 @@
 <body>
 	<div class="body">
 		
-		<ul style="list-style: none;" >
+		<ul style="list-style: none;" >				<!-- List of circles to choose from -->
 			<li>&nbsp;</li>		
             		<li>
 				<ul class="nav nav-pills tr" transform="translate(50,0)">
@@ -131,7 +131,7 @@
 					
 					d3.csv(datafile,function(data){
 						var data = data.filter(function(d){
-							return d.Circle == circle;
+							return d.Circle == circle;			// choose the entries having the selected circle
 						});
 						
 						data.forEach(function(d){
@@ -142,7 +142,7 @@
 							d.LinkType = d.LinkType;
 						});
 									
-						var groupByOperator = d3.nest().key(function(d){return d.Operator;}).entries(data);
+						var groupByOperator = d3.nest().key(function(d){return d.Operator;}).entries(data);	//nest() function groups data based on key
 							
 						var operators = d3.values(groupByOperator).map(function(d){return d.key;});
 						var rangeObj = d3.values(groupByOperator).map(function(d){return d.values;});
@@ -159,7 +159,7 @@
 								.domain(bands)
 								.range(colors);
 									
-						var updown = ['U', 'D', 'U/P'];
+						var updown = ['U', 'D', 'U/P'];			//U - uplink, D - downlink, U/P - unpaied
 			
 						var total = [];					//creating a new array to group data based on operator
 						var a = [], data = [], bandTypes = [];
@@ -174,7 +174,7 @@
 									
 						bandTypes = Array.from(new Set(bandTypes));
 									
-						var canvas_drag =	d3.select('#bandHoldings')
+						var canvas_drag =	d3.select('#bandHoldings')		//creating the draggable area
 									.append('svg')
 									.attr({
 										'width': 1100,
@@ -200,7 +200,7 @@
 							.attr('transform', 'translate(40,35)')
 							.call(dragaxis);
 								
-						var brush = d3.svg.brush()
+						var brush = d3.svg.brush()			//svg.brush() has the dragging features
 							.x(x)
 							.extent([x_start, x_end])
 							.on("brush", brush);
@@ -213,7 +213,7 @@
 							if(d3.event.target.empty()) {
 								s = d3.event.target.extent();
 								d3.event.target.extent([Math.round(s[0]/50) * 50,
-											Math.round((s[1]+50)/50) * 50]);
+											Math.round((s[1]+50)/50) * 50]);		//setting the drag to be in multiples of 50MHz
 								d3.event.target(d3.select(this));
 							}
 							xscale_start_new = brush.extent()[0], xscale_end_new = brush.extent()[1];
@@ -250,7 +250,7 @@
 							.on('click',clicked)
 						;
 										
-						function clicked() {
+						function clicked() {						//calculates the range when the brush is clicked and reloads the values in that range
 							brush.extent([Math.round(x.invert(d3.mouse(this)[0])/50)*50,Math.round((x.invert(d3.mouse(this)[0])+50)/50)*50]);
 							xscale_start = brush.extent()[0], xscale_end = brush.extent()[1];
 							d3.select('.extent').attr('x', function(d) {
@@ -266,7 +266,7 @@
 							main_svg_load(xscale_start, xscale_end);
 						}
 										
-						var canvas = d3.select('#bandHoldings')
+						var canvas = d3.select('#bandHoldings')					//main area
 							.append('svg')
 							.attr('class','main_svg')
 							.attr({
@@ -304,7 +304,7 @@
 								.domain([0,1])
 								.range(liberalized);
 											
-							var legend = canvas.append('g')
+							var legend = canvas.append('g')					//creates legend area
 								.attr('id', 'legend')
 								.attr('transform', 'translate(1100,75)');
 											
@@ -382,7 +382,7 @@
 									else return 'UnPaired';
 								});
 											
-							var grid = d3.range(lines+1).map(function(i) {
+							var grid = d3.range(lines+1).map(function(i) {				//creates grids
 								return {
 									'x1': 0,
 									'y1': 20,
@@ -453,7 +453,7 @@
 								});
 
 
-							var xAxis = d3.svg.axis();
+							var xAxis = d3.svg.axis();					//defining x and y-axis
 							
 							xAxis
 								.orient('bottom')
@@ -600,7 +600,7 @@
 								
 					$(document).ready(function()
                             		{
-						barChartFunction("Data/BandRanges.csv", "Karnataka");
+						barChartFunction("Data/BandRanges.csv", "Karnataka");				//passing the datafile with Karnataka circle as default
 						$(".circle").click(function()
 						{
 							barChartFunction("Data/BandRanges.csv",this.getAttribute("data-circle"));
